@@ -670,11 +670,7 @@
 <h3>使用 SASS Source Maps</h3>
 <p>使用 CSS 预处理器有许多优势，但是在浏览器开发工具中修改比较困难。例如，当你再次运行 SASS 时， 在开发工具中保存的编译后CSS 可能被覆盖，不太理想。SASS 3.3 以上（可以安装使用‘sass gem install sass –pre’），为 SASS 文件创建映射很容易，你可以很容易的保存修改。 </p>
 <p>首先，为 SASS watch 命令增加 <code>--sourcemap</code> ，像这样： </p>
-<pre><code><figure class="highlight"><pre><span class="comment">1</span>
-
-
-
-<span class="comment">sass</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span> <span class="comment">scss/devtoolsecrets</span>.<span class="comment">scss:css/devtoolsecrets</span>.<span class="comment">min</span>.<span class="comment">css</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">style</span> <span class="comment">compressed</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">sourcemap
+<pre><code><figure class="highlight"><pre><span class="comment">sass</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span> <span class="comment">scss/devtoolsecrets</span>.<span class="comment">scss:css/devtoolsecrets</span>.<span class="comment">min</span>.<span class="comment">css</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">style</span> <span class="comment">compressed</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">sourcemap
 </pre></figure></code></pre>
 <p>然后在 SASS 文件底部添加映射文件的名字（sourceMappingURL）： </p>
 <pre><code><figure class="highlight"><pre><span class="number">1</span>
@@ -708,18 +704,7 @@
 <p>在 Chrome ，Javascript 在断点处暂停时，你可以查看当前作用域的所有变量和对象，既可以悬浮查看，也可以通过控制台查看。 </p>
 <p>Firebug 有同样的选项，但是需要在 DOM 菜单选择“show closures”。 如果断点设置恰当，这个强大的属性让你很容易查看闭包里的变量。 </p>
 <p>Firebug 有额外的功能，无需在断点停止，即可访问隐藏的闭包变量。看此例： </p>
-<pre><code><figure class="highlight"><pre><span class="number">1</span>
-<span class="number">2</span>
-<span class="number">3</span>
-<span class="number">4</span>
-<span class="number">5</span>
-<span class="number">6</span>
-<span class="number">7</span>
-<span class="number">8</span>
-
-
-
-<span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name)</span> {</span>
+<pre><code><figure class="highlight"><pre><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name)</span> {</span>
   <span class="keyword">this</span>.introduce = <span class="keyword">function</span>() {
       console.log(<span class="string">"Hello, my name is %s"</span>, name);
   }
@@ -729,11 +714,7 @@
 <span class="comment">// prints "Hello, my name is Arthur" </span>
 </pre></figure></code></pre>
 <p>代码访问以下闭包变量： <strong>closure.%variable</strong> 以上例子，你将用这个表达式访问 name： <strong>someone.introduce.%name // ==&gt; “Arthur”</strong> 注意你也可以改变值： </p>
-<pre><code><figure class="highlight"><pre><span class="number">1</span>
-
-
-
-someone<span class="variable">.introduce</span>.%name = <span class="string">"Trillian"</span>; someone<span class="variable">.introduce</span>(); <span class="comment">// prints "Hello, my name is Trillian"</span>
+<pre><code><figure class="highlight"><pre>someone<span class="variable">.introduce</span>.%name = <span class="string">"Trillian"</span>; someone<span class="variable">.introduce</span>(); <span class="comment">// prints "Hello, my name is Trillian"</span>
 </pre></figure></code></pre>
 <p>Firebug 中，需要 JavaScript 的地方，同样的语法都会生效，例如监控面板和条件断点。 </p>
 <h3>监控值</h3>
