@@ -144,18 +144,17 @@
 </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex2_container"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex2_content"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </pre></figure></code></pre>
-<p>pr  </p>
 <h2>hacks, hacks（小技巧）</h2>
 <p>有许多 <a href="http://blog.themeforest.net/tutorials/vertical-centering-with-css/">hacks</a> ，负 margin，<a href="http://css-tricks.com/centering-in-the-unknown/">影子元素</a> ::before 等。如果你的内容不是固定大小的话，它们大部分是很脆弱的。 </p>
 <h2>translate(-50%,-50%)</h2>
 <p>用 position 加 translate translate(-50%,-50%) 比较奇特，百分比计算不是以父元素为基准，而是以自己为基准。 </p>
 <p>参考文章：<a href="http://jinlong.github.io/blog/2013/07/08/centering-percentage-widthheight-elements/">居中百分比宽高的元素</a></p>
 <p>示例： </p>
-<p>  e&gt;<br>    <style></p>
-<pre><code><figure class="highlight"><pre>  #ex3_container { width:200px; height:200px; background-color:yellow; position:relative; }
-  #ex3_content { left:50%; top:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); background-color:gray; color:white; position:absolute; }
-<span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_container"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_content"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>    &lt;/<span class="attribute">pre</span>&gt;</span>
+<pre><code><figure class="highlight"><pre><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+  <span class="id">#ex3_container</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">yellow;</span></span> <span class="rule"><span class="attribute">position</span>:<span class="value">relative;</span></span> <span class="rule">}</span></span>
+  <span class="id">#ex3_content</span> <span class="rules">{ <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">top</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> <span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">gray;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value">white;</span></span> <span class="rule"><span class="attribute">position</span>:<span class="value">absolute;</span></span> <span class="rule">}</span></span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_container"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_content"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>  
 </pre></figure></code></pre>
 <p>这个技巧相当嚣张，同样适用于没固定大小的内容，<code>min-width</code>，<code>max-height</code>，<code>overflow:scroll</code> 等。 </p>
 <h2>绝对定位居中</h2>
