@@ -704,10 +704,6 @@
 <script src="/js/prettify.js"></script>
 <script src="/js/jquery-2.0.1.min.js"></script>
 	<script type="text/javascript">
-    $(window).load(function(){
-     $("pre").addClass("prettyprint");
-     prettyPrint();
-        });
 	$(document).ready(function()         
 	{	
 		$('.navbar').click(function(){
@@ -731,6 +727,8 @@
 				$('nav').css('display', 'none') ;
 			}
         });
+     $("pre").addClass("prettyprint");
+     prettyPrint();
      $('.closeaside').click(function(){
             $('#asidepart').fadeOut();
             $('#main').animate({
