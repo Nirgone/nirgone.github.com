@@ -18,92 +18,120 @@
     <meta property="og:image" content="undefined"/>
   
 
-  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link href="/favicon.png" rel="icon">
+
   <link rel="alternate" href="/atom.xml" title="All is well" type="application/atom+xml">
+
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+    {
+      tex2jax: {inlineMath: [['$','$'], ['\(','\)']]},
+      TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    }
+  );
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
   
 </head>
 
+
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">All is well</a></h1>
-  <h2><a href="/">javascript, css, and design</a></h2>
-</div>
+    <div class="container">
+      <div class="left-col">
+        <div class="intrude-less">
+          <header id="header" class="inner">
+            <div class="profilepic">
+  <script src="/js/md5.js"></script>
+  <script type="text/javascript">
+    $(function(){
+	$('.profilepic').append(
+          "<img src='http://www.gravatar.com/avatar/"
+          + MD5("nirgone@gmail.com")
+          + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+    });
+  </script>
+</div><!-- profilepic -->
+<h1><a href="/">nierong</a></h1>
+<p class="subtitle">All is well</p>
 <nav id="main-nav">
-  <ul>
+  
+  <section class="aboutme">
+    <p>
+      javascript, css, and design
+    </p>
+  
+  </section>
+</nav><!-- main-nav -->
+<nav id="sub-nav">
+  <div class="social">
     
-      <li><a href="/">Home</a></li>
+      <a class="twitter" href="http://twitter.com/nuklly"
+         title="Twitter">Twitter</a>
     
-      <li><a href="/about">About</a></li>
     
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div>
-<div class="alignleft" style="margin-top: 15px">
+      <a class="github" href="http://github.com/nuklly"
+         title="Github">Github</a>
+    
+    
+        <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+    
+  </div>
+</nav><!-- sub-nav -->
 
 
-</div>
-<div class="clearfix"></div>
-</header>
-  <div id="content" class="inner">
-    <div id="wrapper"><article class="page">
+          <header>
+        </div><!-- intrude-less -->
+      </div><!-- left-col -->
+      <div class="mid-col">
+        <div class="mid-col-container">
+	    <div id="content" class="inner"><article class="page">
   
-  <div class="post-content">
-    <header>
-      
+  <h1 class="title">about</h1>
   
-    <h1 class="title"><a href="/about/index.html">about</a></h1>
-  
-
-      
-    </header>
-    <div class="entry">
-      
-        <p>真的不知道怎么写，也没有什么值得写上来的，再给我一点时间。</p>
+  <div class="entry-content"><p>真的不知道怎么写，也没有什么值得写上来的，再给我一点时间。</p>
 <p>这个blog主要是贴一些前端和设计相关的，有些不是原创的好文章我也会贴上去. </p>
 <p>加油！   </p>
 <h2>Contact</h2>
 <p> <a href="http://twitter.com/nirgone">@nirgone</a> on Twitter ,OR nirgone#gmail.com</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
+</div>
 </article>
-<!-- hackish -->
+
+
 </div>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2013 nierong
-  
-</div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+	</div>
+        <footer id="footer" class="inner">
+          Copyright © 2013 - nierong - Powered by <a href="https://github.com/tommy351/hexo">Hexo</a><br>
+- Ported theme <a href="https://github.com/nuklly/hexo-theme-greyshade">GreyShade</a> -
+        </footer>
+        
+<script src="/js/slash.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
 
 <script type="text/javascript">
-var disqus_shortname = 'nirgone';
+  var disqus_shortname = 'nirgone';
 
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-</script>
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+  </script>
+
+
+
 
 
 
@@ -115,5 +143,10 @@ var disqus_shortname = 'nirgone';
 })(jQuery);
 </script>
 
+
+
+
+      </div><!-- mid-col -->
+    </div><!-- container -->
 </body>
 </html>

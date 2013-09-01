@@ -18,601 +18,300 @@
     <meta property="og:image" content="undefined"/>
   
 
-  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link href="/favicon.png" rel="icon">
+
   <link rel="alternate" href="/atom.xml" title="All is well" type="application/atom+xml">
+
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+    {
+      tex2jax: {inlineMath: [['$','$'], ['\(','\)']]},
+      TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    }
+  );
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
   
 </head>
 
+
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">All is well</a></h1>
-  <h2><a href="/">javascript, css, and design</a></h2>
-</div>
+    <div class="container">
+      <div class="left-col">
+        <div class="intrude-less">
+          <header id="header" class="inner">
+            <div class="profilepic">
+  <script src="/js/md5.js"></script>
+  <script type="text/javascript">
+    $(function(){
+	$('.profilepic').append(
+          "<img src='http://www.gravatar.com/avatar/"
+          + MD5("nirgone@gmail.com")
+          + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+    });
+  </script>
+</div><!-- profilepic -->
+<h1><a href="/">nierong</a></h1>
+<p class="subtitle">All is well</p>
 <nav id="main-nav">
-  <ul>
+  
+  <section class="aboutme">
+    <p>
+      javascript, css, and design
+    </p>
+  
+  </section>
+</nav><!-- main-nav -->
+<nav id="sub-nav">
+  <div class="social">
     
-      <li><a href="/">Home</a></li>
+      <a class="twitter" href="http://twitter.com/nuklly"
+         title="Twitter">Twitter</a>
     
-      <li><a href="/about">About</a></li>
     
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div>
-<div class="alignleft" style="margin-top: 15px">
-
-
-</div>
-<div class="clearfix"></div>
-</header>
-  <div id="content" class="inner">
-    <div id="wrapper">
-<h2 class="archive-title">2013</h2>
-
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2013/08/31/css居中/">css居中</a></h1>
-  
-
-      
-        <p class="published">
-          Published: <time datetime="2013-08-30T17:20:27.000Z">8月 31 2013</time>
-        </p>
-      
-    </header>
-    <div class="entry">
-      
-        <p>关于居中实现的一些方法    </p>
-<h2>center</h2>
-<p>不建议用了。    </p>
-<h2>text-align:center</h2>
-<p>在父容器里水平居中 inline 文字，或 inline 元素    </p>
-<h2>vertical-align:middle</h2>
-<p>垂直居中 inline 文字，inline 元素，配合 <code>display:table</code> ，<code>display:table-cell</code>，有奇效。    </p>
-<h2>line-height</h2>
-<p>与 height 联手，垂直居中文字    </p>
-<h2>margin:auto</h2>
-<p>示例： </p>
-<pre><code><figure class="highlight"><pre><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
-  <span class="id">#ex2_container</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">yellow;</span></span> <span class="rule">}</span></span>
-  <span class="id">#ex2_content</span> <span class="rules">{ <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span>px auto;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">gray;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value">white;</span></span> <span class="rule"><span class="attribute">display</span>:<span class="value">table;</span></span> <span class="rule">}</span></span>
-</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex2_container"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex2_content"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</pre></figure></code></pre>
-<h2>hacks, hacks（小技巧）</h2>
-<p>有许多 <a href="http://blog.themeforest.net/tutorials/vertical-centering-with-css/">hacks</a> ，负 margin，<a href="http://css-tricks.com/centering-in-the-unknown/">影子元素</a> ::before 等。如果你的内容不是固定大小的话，它们大部分是很脆弱的。 </p>
-<h2>translate(-50%,-50%)</h2>
-<p>用 position 加 translate translate(-50%,-50%) 比较奇特，百分比计算不是以父元素为基准，而是以自己为基准。 </p>
-<p>参考文章：<a href="http://jinlong.github.io/blog/2013/07/08/centering-percentage-widthheight-elements/">居中百分比宽高的元素</a></p>
-<p>示例： </p>
-<pre><code><figure class="highlight"><pre><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
-  <span class="id">#ex3_container</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">yellow;</span></span> <span class="rule"><span class="attribute">position</span>:<span class="value">relative;</span></span> <span class="rule">}</span></span>
-  <span class="id">#ex3_content</span> <span class="rules">{ <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">top</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> <span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">gray;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value">white;</span></span> <span class="rule"><span class="attribute">position</span>:<span class="value">absolute;</span></span> <span class="rule">}</span></span>
-</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_container"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_content"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</pre></figure></code></pre>
-<p>这个技巧相当嚣张，同样适用于没固定大小的内容，<code>min-width</code>，<code>max-height</code>，<code>overflow:scroll</code> 等。 </p>
-<h2>绝对定位居中</h2>
-<p>父容器元素：<code>position: relative</code></p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span>;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<p><strong>注意：高度必须定义，建议加 <code>overflow: auto</code>，防止内容溢出。</strong></p>
-<h4>视口居中</h4>
-<p>内容元素：<code>position: fixed</code>，<code>z-index: 999</code>，记住父容器元素 <code>position: relative</code></p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Fixed</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> fixed;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span>;</span></span>
-  <span class="rule"><span class="attribute">z-index</span>:<span class="value"> <span class="number">999</span>;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<p><a href="http://codepen.io/shshaw/full/gEiDt#Fixed">模态窗口实例</a></p>
-<h4>响应式</h4>
-<p>百分比宽高，最大、最小宽度均可以，加 padding 也可以 </p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Responsive</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">60</span>%;</span></span>
-  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">60</span>%;</span></span>
-  <span class="rule"><span class="attribute">min-width</span>:<span class="value"> <span class="number">400</span>px;</span></span>
-  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">500</span>px;</span></span>
-  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">40</span>px;</span></span>
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span>;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h4>偏移</h4>
-<p>只要 <code>margin: auto;</code> 在，内容块将垂直居中，top, left, bottom, right 可以设置偏移。 </p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Right</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> auto;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">20</span>px;</span></span>
-  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> right;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h4>溢出</h4>
-<p>居中内容比父容器高时，防止溢出，加 <code>overflow: auto</code> （没有任何 padding 时，也可以加 <code>max-height: 100%;</code>）。 </p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Overflow</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">300</span>px;</span></span>
-  <span class="rule"><span class="attribute">max-height</span>:<span class="value"> <span class="number">100</span>%;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span>;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h4>调整尺寸</h4>
-<p><strong>resize</strong> 属性可以让尺寸可调。 设置 <strong>min- /max-</strong> 限制尺寸，确定加了 <code>overflow: auto</code> 。 </p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Resizable</span> <span class="rules">{
-  <span class="rule"><span class="attribute">min-width</span>:<span class="value"> <span class="number">20</span>%;</span></span>
-  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">80</span>%;</span></span>
-  <span class="rule"><span class="attribute">min-height</span>:<span class="value"> <span class="number">20</span>%;</span></span>
-  <span class="rule"><span class="attribute">max-height</span>:<span class="value"> <span class="number">80</span>%;</span></span>
-  <span class="rule"><span class="attribute">resize</span>:<span class="value"> both;</span></span>
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span>;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h4>图像</h4>
-<p>图像同样适用，设置 <code>height: auto;</code></p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Image</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">height</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span>;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h4>可变高度</h4>
-<p>高度必须定义，但可以是百分比或 max-height。不想定义高度的话，用 <code>display: table</code> （需要考虑 Table-Cell 兼容性）。 </p>
-<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Variable</span> <span class="rules">{
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> table;</span></span>
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span>;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h2>负 margin</h2>
-<p>确切知道宽高，负 margin 是宽和高的一半。 </p>
-<pre><code><figure class="highlight"><pre><span class="class">.is-Negative</span> <span class="rules">{
-        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">300</span>px;</span></span>
-        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200</span>px;</span></span>
-        <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20</span>px;</span></span>
-        <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute;</span></span>
-        <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-        <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">170</span>px;</span></span> <span class="comment">/* (width + padding)/2 */</span>
-        <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> -<span class="number">120</span>px;</span></span> <span class="comment">/* (height + padding)/2 */</span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h2>Table-Cell</h2>
-<p>参考文章：<a href="http://www.456bereastreet.com/archive/201103/flexible_height_vertical_centering_with_css_beyond_ie7/">Flexible height vertical centering with CSS, beyond IE7</a></p>
-<p>结构： </p>
-<pre><code><figure class="highlight"><pre><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"Pos-Container is-Table"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"Table-Cell"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"Center-Block"</span>&gt;</span>
-    &amp;lt!-- CONTENT --&gt;
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</pre></figure></code></pre>
-<p>样式： </p>
-<pre><code><figure class="highlight"><pre><span class="class">.Pos-Container</span><span class="class">.is-Table</span> <span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> table;</span></span> <span class="rule">}</span></span>
-<span class="class">.is-Table</span> <span class="class">.Table-Cell</span> <span class="rules">{
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> table-cell;</span></span>
-  <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> middle;</span></span>
-<span class="rule">}</span></span>
-<span class="class">.is-Table</span> <span class="class">.Center-Block</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<h2>FlexBox</h2>
-<p>参考文章：<a href="http://coding.smashingmagazine.com/2013/05/22/centering-elements-with-flexbox/">Designing CSS Layouts With Flexbox Is As Easy As Pie</a>   </p>
-<pre><code><figure class="highlight"><pre><span class="class">.Pos-Container</span><span class="class">.is-Flexbox</span> <span class="rules">{
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-box;</span></span>
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> -moz-box;</span></span>
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> -ms-flexbox;</span></span>
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-flex;</span></span>
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> flex;</span></span>
-  <span class="rule"><span class="attribute">-webkit-box-align</span>:<span class="value"> center;</span></span>
-     <span class="rule"><span class="attribute">-moz-box-align</span>:<span class="value"> center;</span></span>
-     <span class="rule"><span class="attribute">-ms-flex-align</span>:<span class="value"> center;</span></span>
-  <span class="rule"><span class="attribute">-webkit-align-items</span>:<span class="value"> center;</span></span>
-          <span class="rule"><span class="attribute">align-items</span>:<span class="value"> center;</span></span>
-  <span class="rule"><span class="attribute">-webkit-box-pack</span>:<span class="value"> center;</span></span>
-     <span class="rule"><span class="attribute">-moz-box-pack</span>:<span class="value"> center;</span></span>
-     <span class="rule"><span class="attribute">-ms-flex-pack</span>:<span class="value"> center;</span></span>
-  <span class="rule"><span class="attribute">-webkit-justify-content</span>:<span class="value"> center;</span></span>
-          <span class="rule"><span class="attribute">justify-content</span>:<span class="value"> center;</span></span>
-<span class="rule">}</span></span>
-</pre></figure></code></pre>
-<blockquote>
-<p>参考资料：<br><em> <a href="http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/">Absolute Horizontal And Vertical Centering In CSS</a>    
-</em> <a href="http://codepen.io/shshaw/full/gEiDt">Absolute Centering in CSS</a><br><em> <a href="http://html5hub.com/centering-all-the-directions/#i.n590rnl9he4uud">CENTERING ALL THE DIRECTIONS</a>    
-</em> <a href="http://demosthenes.info/blog/723/Six-Ways-of-Centering-With-CSS">Seven Ways of Centering With CSS</a><br><em> <a href="http://designshack.net/articles/css/how-to-center-anything-with-css">How to Center Anything With CSS</a>    
-</em> <a href="http://blog.themeforest.net/tutorials/vertical-centering-with-css/">Vertical Centering With CSS</a>    </p>
-</blockquote>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
+      <a class="github" href="http://github.com/nuklly"
+         title="Github">Github</a>
+    
+    
+        <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+    
   </div>
-</article>
-<!-- hackish -->
+</nav><!-- sub-nav -->
 
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2013/08/24/pro-active-steps-to-prevent-procrastination/">Pro-Active Steps to Prevent Procrastination</a></h1>
-  
 
-      
-        <p class="published">
-          Published: <time datetime="2013-08-23T22:07:23.000Z">8月 24 2013</time>
-        </p>
-      
-    </header>
-    <div class="entry">
-      
-        <p>One of the biggest obstacles to completing all the tasks required during any day is procrastination – in other words, avoidance of any task that doesn’t appeal by doing other non-essential tasks instead. Most of us don’t even realize when we are procrastinating but a failure to regularly complete what should be an average amount of work during the day is an indication that procrastination is at work somewhere in our day. Once we are aware that this is a possibility, it’s usually quite easy to identify the tasks which are being avoided, and the “time fillers” being used to legitimately fill the time so that we are unable to do the things we want to ignore. Unfortunately, ignoring them doesn’t make them disappear; it just makes them become more of a priority the next day. </p>
-<p>There are several key issues which make us avoid certain jobs and by identifying the tasks that we really avoid, and the ways in which we can make them more enjoyable, we can start to take control of the procrastination issue so that we can benefit from the success in completing what we need to accomplish each day. Some of these issues, with possible solutions, are as follows: </p>
-<p><strong>Time Taking Projects</strong></p>
-<p><em>Issue:</em><br>These are projects which take up one line in our daily work schedule but which we know are going to take at least half a day or more to complete, and so instead of doing them we use the time to do five or six other less important tasks and feel we have done more! Of course, the project doesn’t go away, it just sits there until it becomes urgent and increases our stress level as it has to be done so quickly! </p>
-<p><em>Solution:</em><br>Instead of giving the task only one line in the “to do” list, itemize each part of the project so that instead of one task, it becomes a series of tasks. It will take the same length of time, but at least it feels as if we have done something with our day. </p>
-<p><strong>Tasks We Hate</strong></p>
-<p><em>Issue:</em><br>These are the projects which for some reason or other we just hate to do. They can be complex tasks such as comparative analysis, or simple ones such as filing the daily sales reports. Whatever they are, we put them off as long as possible for no other reason than we just don’t like doing them. </p>
-<p><em>Solution:</em><br>Put jobs that are disliked at the top of the “to do” list so that they are over and done with in the first part of the morning, and the rest of the day can be spent doing more pleasant tasks. </p>
-<p><strong>Needing Perfection/Fear of Failure</strong></p>
-<p><em>Issue:</em><br>These tasks are the ones where we want to make a good impression, or there is something crucial resting on how well we do our job. We avoid doing them because we fear that our work won’t be good enough and we will fail in some way. </p>
-<p><em>Solution:</em><br>Think about what the worst thing that could happen would be if the project wasn’t perfect, but instead was a good as we can possibly make it. Then allocate a set amount of time each day to work on the project, allowing plenty of time to edit/review before the deadline. Realizing that it’s possible to perfect something to the point at which it starts to lose the original focus is another way of knowing when to let go of a project instead of keeping it on the list for yet another day instead of finishing it and sending it to the outbox. 
+          <header>
+        </div><!-- intrude-less -->
+      </div><!-- left-col -->
+      <div class="mid-col">
+        <div class="mid-col-container">
+	    <div id="content" class="inner">
 
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<!-- hackish -->
 
+<div itemscope itemtype="http://schema.org/Blog">
   
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2013/08/24/photoshop’s-role-in-a-web-design-workflow/">Photoshop’s Role in a Web Design Workflow</a></h1>
-  
+    
+    
+    <section class="archives"><h1 class="year">2013</h1>
+    
+    
+      <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="meta">
+          
+<span class="date">
 
+<time datetime="2013-08-30T17:20:27.000Z"
       
-        <p class="published">
-          Published: <time datetime="2013-08-23T19:29:02.000Z">8月 24 2013</time>
-        </p>
-      
-    </header>
-    <div class="entry">
-      
-        <p>The web has undergone some serious changes in recent years and the way in which the web is designed is changing along with it. Photoshop may still be the “go-to” tool for many web designers, but for some, Photoshop is no longer king. In this article, Ian Yates, Editor of <a href="http://webdesign.tutsplus.com/">Webdesigntuts+</a> will explain how Photoshop was used in the past, how it can be used in the future, and why.  </p>
-<hr>
-<h2>What is it Good For?</h2>
-<p>Technically speaking, Photoshop is an application for manipulating imagery (forgive me for stating the obvious there) but it’s also packed with tools for building graphics from scratch. Shape, vector, type, fills and effects, all of these (and more) lend themselves very well to constructing graphic layouts. </p>
-<p>Not too long ago, web browsers were incapable of directly generating these kinds of effects themselves, but they could display bitmap images perfectly well. In order to explore graphic design within a browser it was only logical to reach for Photoshop, create your visuals, save them as images and use them within a web page. </p>
-<p>Gradients, shadows, patterns, angles; all easy to create with Photoshop’s tools – not too easy to create with anything else. </p>
-<p>Building for the web was also relatively complex (far less streamlined than nowadays) so mocking up a layout in Photoshop was always going to be easier and quicker than battling with Dreamweaver. Why wouldn’t you design in a graphics application, get approval from the client, <em>then</em> actually build for the web? Today’s designers have grown up using Photoshop because it offered the quickest way to visualize a hi-fidelity design concept.  </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-kuhboom.jpg" alt="photoshop-and-web-design-kuhboom"></p>
-<p><a href="http://www.kuhboom.com/">kuhboom.com</a>: Densely textured web designs will have you reaching for the slice tool.</p>
-<h3>The Legacy of Print Design</h3>
-<p>Back when the web was an emerging medium there were no “web agencies”, so the task of crafting it fell to print designers. These guys did what was logical; they took their digital print design experience, values, techniques, processes and tools, then applied them to this brave new world. They effectively ported print design to the screen, so the workflow already existed:  </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-print-workflow.png" alt="photoshop-and-web-design-print-workflow">  </p>
-<p>All that needed altering was the final output. As such, Photoshop witnessed the changes and went along for the ride, further rooting itself as the graphic designer’s best friend.  </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-web-workflow.png" alt="photoshop-and-web-design-web-workflow">  </p>
-<hr>
-<h2>What are its Limitations?</h2>
-<p><a href="https://vimeo.com/11205275">Times they are a-changin’</a> (as Bob Dylan said). The web is a different place these days and Photoshop’s role in the process of designing for that web is also changing. Why? </p>
-<p>A big part of the issue lies in technological advancements which have driven huge change in web design over recent years. We’ve seen the internet grow from a library of static documents to an interactive pool of services and applications. Network providers have spread their fingers into almost every corner of the globe, bandwidth and speed have increased to science fiction-like levels. Internet enabled devices such as smartphones, tablets, even watches, are manufactured affordably and rapidly. All of this has revolutionized the way in which we use the web – and it’s drastically altered our perception of how we should be designing for it. </p>
-<h3>A Fluid Web</h3>
-<p>Print designers begin with constraints (the fixed dimensions of a page) then design within them. When first designing for the web this was also a logical starting point; establish a fixed canvas and work inwards. To figure out what those fixed dimensions should be, designers had to make assumptions about end user screen sizes. Very early on 800x600px was most common. Later, 1024x800px was the norm. Working to <a href="http://960.gs/">a grid of 960px</a> made sense because it fit most screens (larger screens were rare, owners of smaller screens would just have to upgrade eventually) and was divisible by a range of column widths. </p>
-<p>These assumptions were wrong then (forcing a user to adjust <em>their</em> browsing to <em>your</em> design?!) and are even more so these days. How big is a web page today? </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-brad-frost.jpg" alt="photoshop-and-web-design-brad-frost"></p>
-<p>From Brad Frost’s <a href="http://bradfrostweb.com/blog/post/this-is-the-web/">This is the Web</a></p>
-<p>Back in May 2010 a chap called <a href="http://webdesign.tutsplus.com/articles/interviews/a-ten-minute-chat-with-ethan-marcotte/">Ethan Marcotte</a> wrote about <a href="http://alistapart.com/article/responsive-web-design">a brilliant idea</a> he’d conceived. Taking existing technologies and methods he proposed an approach “Responsive Web Design” which utilized fluid layouts (not fixed), flexible images (which grow and shrink with the layout) and CSS Media Queries (which allow layouts to change depending on the screen size and other factors). </p>
-<p>With these ideas the web changed, irreversibly. </p>
-<p>Thanks to Ethan’s concepts, web designers have come to realize that they should be thinking from the <strong>content outwards</strong>, not the <strong>page boundaries inwards</strong> (though it should be noted that this approach isn’t compulsory). We don’t know how big a web page is, so we need to design our content to fit into whatever boundaries it’s faced with. Think of web content as being like liquid; capable of being poured into all manner of vessels. </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-liquid-content.png" alt="photoshop-and-web-design-liquid-content">  </p>
-<p>Herein lies a problem for Photoshop. Photoshop inherently works to fixed boundaries. Shapes, type and objects within its layouts are fixed, whereas web pages increasingly aren’t. Producing a comp to present to a client used to be quickly achieved in Photoshop, but how can you effectively present a fluid layout as a static snapshot? </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-tnw.jpg" alt="photoshop-and-web-design-tnw"></p>
-<p>The Next Web as presented by <a href="http://mediaqueri.es/">mediaqueri.es</a></p>
-<h3>The Problem With Pixels – I</h3>
-<p>Typography is another great example of print designers trying to force constraints onto end users. Every user’s browser gives them the power to set their default type size; after all, some people prefer smaller lettering, whilst others might prefer an easier reading experience with larger type. By default, browsers usually set type at 16px, so unless a designer states otherwise, or a user alters the default, that’s how big body copy will be. </p>
-<p>Print designers, however, have real difficulty in relinquishing this control. “How can you let the user define the size of the type?! Have you any idea what that will do to the rest of the layout?!” </p>
-<p>Locking down the font-size within a web design (through CSS) will go a long way in preventing anything unpredictable from happening, but it’s hardly user-friendly. These days, it’s considered best practice to size page elements and typography using <strong>ems</strong> instead of <strong>pixels</strong>; relative units of measurement which are based on the default font-size. Therefore if a browser happens to have a different default font size the whole design can flex in response to that. </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-ems.png" alt="photoshop-and-web-design-ems">  </p>
-<p>This flexibility, again, highlights the limitations of designing static comps in Photoshop. </p>
-<h3>The Problem With Pixels – II</h3>
-<p>Browsers are developing very quickly these days and images are no longer needed for many effects on the web. CSS is capable of producing accurate gradients, curves, skewed objects, shadows, alpha transparency (the list goes on) and this is just as well given the dawn of Retina screens. <a href="http://en.wikipedia.org/wiki/Retina_Display">Retina displays</a> (or more accurately: high pixel density screens) have really thrown a spanner in the works for web designers. Retina screens have twice as many pixels as normal screens, allowing them the luxury of rendering everything super-sharp. Anything pixel-based, however, is simply blown up twice as wide, twice as high, resulting in comparatively lower quality. </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-retina.png" alt="photoshop-and-web-design-retina">  </p>
-<p>In order that websites retain their sharpness, designers are having to rely as much as possible on what the browser can render itself. In fact, the recent trend towards “<a href="http://fltdsgn.com/">Flat Design</a>” is (in part) a reaction to this purely CSS-based web design. </p>
-<p>All this takes an enormous chunk of what Photoshop does (producing bitmaps) out of the equation. </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-flat-ui.png" alt="photoshop-and-web-design-flat-ui"></p>
-<p>Designmodo’s <a href="http://designmodo.github.io/Flat-UI/">Flat UI</a> kit</p>
-<h3>Performance Based Design</h3>
-<p>As we’ve mentioned, the web has gone truly global thanks to the spread of mobile devices. It’s forced us to realise that we can’t know the circumstances under which our content is being accessed. We don’t know whether our end user is sitting on the couch with a Kindle, paragliding with an iPhone or running through the Gobi Desert with a MacBook Pro. We don’t know how big their screen is, what their processor is like and, equally, we can’t assume to know how fast their connection is. </p>
-<p>We’re starting to realise that performance is a fundamental part of designing for the web. Again, images play a role in this. Every individual asset (be it an image, a script, a document, whatever) which is pulled from a web server is costly. </p>
-<blockquote>
-<p>Instead of keeping files like images and fonts in a folder called “assets”, I’m going to rename the folder “liabilities”. </p>
-<p>— Jeremy Keith (@adactio) <a href="https://twitter.com/adactio/status/303486005980319745">February 18, 2013</a></p>
-</blockquote>
-<p>Not only should they be optimized to be as small as possible, but they should also be as <em>few</em> as possible. Browsers are limited in the amount of assets they can <em>simultaneously</em> download, often to just two at any given time. If your web page holds hundreds of individual images they’ll form a bottleneck, ultimately delivering a negative experience to the end user. </p>
-<p>This can be helped, by combining image files into single sprites, but (again) retina screens force some kind of backup plan. </p>
-<p>Instead, effects are better achieved with CSS, icons can be <a href="http://hub.tutsplus.com/categories/development/articles/webdesign-12009-community-project-any-old-icon">embedded through web fonts</a>, <a href="http://hub.tutsplus.com/categories/development/tutorials/webdesign-11375-your-logo-as-a-web-font-ligature">logos</a> can be implemented as <a href="http://hub.tutsplus.com/categories/development/tutorials/webdesign-7515-getting-started-with-scalable-vector-graphics-svg">scalable vector graphics</a>, all of which spells the end for the slice tool. </p>
-<h3>Doubling of Efforts</h3>
-<p>Back when the web designer’s workflow was effectively the same as print with the internet tacked onto the end, designing layouts in Photoshop was an integral part of the process: </p>
-<ul>
-<li>Familiar tools meant relatively quick layouts.</li>
-<li>Presenting static comps to the client was much the same as presenting print layouts.</li>
-<li>Pixel-precision meant that measurements could be directly applied to the browser equivalent.</li>
-<li>Actual assets were sliced from layout comps for use in the web page.</li>
-</ul>
-<p>These days, with less of the final result relying on assets built in a graphics application, designing a whole layout in Photoshop effectively means doubling your efforts. Build it once to get an idea of what it will look like, then build it for real. Then throw the PSD away because it’s no use to anyone. </p>
-<h3>Adding to the Toolkit</h3>
-<p>Adobe were either resisting change, or simply trying to be accomodating, when they introduced a few web design features in CS6. The CSSHat-like CSS output panel enables you to grab code from your visually created page elements. They also made it possible to paste a hex color (copied from the browser) including hashtag (#ffffff for example) into Photoshop’s color picker without throwing an error. </p>
-<p>Paragraph styles (a bit like in InDesign) were introduced to give more global control over typography. Lorem Ipsum found its way in as a standard feature and now you can even choose common device dimensions as document presets! </p>
-<p>But we’re in denial here – there’s a big blue elephant standing in the corner of the room. </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-elephant.png" alt="photoshop-and-web-design-elephant">  </p>
-<hr>
-<h2>It’s Time for a Modular, Flexible Workflow</h2>
-<p>What we’re actually looking at here, isn’t an application which fails to fit web design, but a workflow which is no longer appropriate. In fact, even before the web went all fluid and squishy there were fundamental flaws in the Photoshop web design process as we’ve described it. There was a tendancy to create pixel perfect renderings of web pages before building could even begin. And then, because of the obsession with getting everything 100% perfect in Photoshop, there’d be a similar fanaticism for achieving identical results in all browsers. It’s taken us a long time to realise that web pages <a href="http://dowebsitesneedtolookexactlythesameineverybrowser.com/">don’t have to appear identical</a> in all browsers! </p>
-<p>One serious issue with aiming for perfection in Photoshop arises when the client gets involved. This workflow makes it all too easy to become stuck in an infinite loop of clients making pixel–pushing suggestions, inevitably <a href="http://theoatmeal.com/comics/design_hell">losing sight of the big picture</a>. </p>
-<p>What’s needed is a more modular approach to web design and Photoshop can absolutely play a part in that. Consider first the planning stage; gathering of information and content, sketching relationships between areas of the website as a whole – a crucial part of this modular process, but best carried out away from Photoshop. </p>
-<p><a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/a-beginners-guide-to-wireframing/">Wireframing</a> takes the process further; laying out rudimentary interface elements, establishing visual relationships, hierarchy and basic interaction. Again, this isn’t a task Photoshop carries out very well, instead making way for applications such as <a href="http://webdesign.tutsplus.com/tutorials/ux-tutorials/a-beginners-guide-to-wireframing-in-omnigraffle">Omnigraffle</a> and <a href="http://www.balsamiq.com/">Balsamiq</a>, even Illustrator (and there are many more). </p>
-<p>Photoshop lends itself far better to aesthetics. It can’t describe layouts fluidly, but it can explore colors, textures, individual element styles, typography, atmosphere and mood. <a href="http://styletil.es/">Style Tiles</a> is a concept suggested by Samantha Warren. They’re essentially Photoshop mood boards, but highlight a way of isolating and presenting the aesthetic phase to the client. </p>
-<p>The next module in this workflow is prototyping; building basic, but functional layouts for the browser. And no, this isn’t Photoshop’s cup of tea either. In fact, Adobe is busily working on an alternative line of applications to help out here. Their <a href="http://html.adobe.com/edge/">Edge Tools</a> aim to offer a familiar canvas interface, which outputs fluidly for the browser; ideal for rapid prototyping, but still very much a work in progress. </p>
-<p>Each of these modular stages takes an aspect of the design process, isolates it and heavily involves the client, giving them plenty of opportunity to sign off on each stage without affecting the others. </p>
-<p>Do note that this is a suggested workflow, nothing is written in stone where design is concerned and there’s often more involved than these general stages. Which leads me to my closing point. </p>
-<p><img src="http://cdn.tutsplus.com/psd.tutsplus.com/uploads/2013/04/photoshop-and-web-design-modular-workflow.png" alt="photoshop-and-web-design-modular-workflow">  </p>
-<hr>
-<h2>Whatever Works!</h2>
-<p>Any design process is extremely personal and what works for someone else won’t necessarily work for you. There are plenty of people calling for an end to web design in Photoshop, campaigning for a browser-based workflow instead. The fact is, if Photoshop works for you, use it! At the end of the day, we’re designers – if we want to spend hundreds of man hours pushing pixels and polishing our <a href="http://dribbble.com/">Dribbble</a> portfolio, let’s allow ourselves to luxuriate in that! </p>
-<hr>
+      data-updated="true"
+       itemprop="datePublished">
+  8月 31
+</time>
 
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<!-- hackish -->
 
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2013/07/25/secrets-of-the-browser-developer-tools/">Secrets of the Browser Developer Tools</a></h1>
-  
 
-      
-        <p class="published">
-          Published: <time datetime="2013-07-24T18:25:00.000Z">7月 25 2013</time>
-        </p>
-      
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>源网站：<a href="http://devtoolsecrets.com/">Secrets of the Browser Developer Tools</a>  </p>
-</blockquote>
-<h2>目录</h2>
-<ul>
-<li>常规<ol>
-<li>找到开发工具</li>
-<li>用最新的开发版</li>
-<li>移动开发工具位置</li>
-<li>开发工具调试响应式设计</li>
-<li>学习快捷键</li>
-</ol>
-</li>
-<li>Console 控制台<ol>
-<li>Log, Info, Debug, Warn, Error</li>
-<li>输出数据表格</li>
-<li>Assert</li>
-<li>使用控制台定时器</li>
-<li>持久控制台</li>
-<li>重新运行命令</li>
-<li>任意 Tab 打开控制台</li>
-<li>改变框架焦点</li>
-<li>引用当前和前一个元素</li>
-<li>最终求值表达式</li>
-</ol>
-</li>
-<li>检查<ol>
-<li>通过面包屑导航 DOM</li>
-<li>搜索 DOM 节点</li>
-<li>检查字体</li>
-<li>浏览你的响应式网站</li>
-<li>3D 视图</li>
-</ol>
-</li>
-<li>编辑<ol>
-<li>改变 CSS 值</li>
-<li>改变 :active， :hover， :focus， :visited 状态样式</li>
-<li>拖拽重排元素</li>
-<li>使用 SASS Source Maps</li>
-</ol>
-</li>
-<li>调试<ol>
-<li>用 debugger; 调试</li>
-<li>条件断点</li>
-<li>DOM 断点</li>
-<li>XHR 断点</li>
-<li>检查断点的作用域</li>
-<li>监控值</li>
-<li>调试压缩后的 JavaScript</li>
-<li>使用 JavaScript Source Maps</li>
-<li>模拟User Agent</li>
-<li>模拟触控设备</li>
-<li>覆盖地理位置</li>
-<li>重写设备方向</li>
-<li>调试 Canvas 元素</li>
-<li>运行代码片段</li>
-</ol>
-</li>
-<li>性能<ol>
-<li>禁用浏览器缓存</li>
-<li>排序网络请求找到瓶颈</li>
-<li>网络时间轴导出为 HAR 文件</li>
-<li>检查 DOMContentLoad 和 Load 事件</li>
-<li>重发送 XHR 请求</li>
-<li>测量渲染性能和 FPS</li>
-</ol>
-</li>
-<li>移动端<ol>
-<li>开发工具调试 IOS</li>
-<li>开发工具调试 Android</li>
-</ol>
-</li>
-<li>扩展<ol>
-<li>覆盖地理位置</li>
-</ol>
-</li>
-</ul>
-<h2>常规</h2>
-<h3>找到开发工具</h3>
-<p>快捷方式： </p>
-<ul>
-<li>“F12”（Windows）</li>
-<li>“Cmd”⌘ +“Option” +“I”（Mac）</li>
-<li>右键选择“Inspect Element 检查元素”</li>
-<li>Safari 需要在 首选项 &gt; 高级 &gt; 显示开发菜单，启用开发工具</li>
-<li><p>Firebug 是 Firefox 扩展，需要[在此][3]安装</p>
-<p>[3]: <a href="http://getfirebug.com/">http://getfirebug.com/</a>
 
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<!-- hackish -->
 
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2013/01/19/Hello/">Hello!</a></h1>
-  
 
-      
-        <p class="published">
-          Published: <time datetime="2013-01-19T14:53:19.000Z">1月 19 2013</time>
-        </p>
-      
-    </header>
-    <div class="entry">
-      
-        <p>XD</p>
+</span>
 
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-<!-- hackish -->
+          <br>
+          
 
-  
 
-  <nav id="pagination">
+          
+        </div>
+        <h1 class="title" itemprop="name">
+          <a href="/2013/08/31/css居中/">css居中</a>
+        </h1>
+    </article>
+    
   
+    
+    
+    
+      <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="meta">
+          
+<span class="date">
+
+<time datetime="2013-08-23T22:07:23.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  8月 24
+</time>
+
+
+
+
+
+
+<br>
+<time datetime="2013-09-01T11:36:10.000Z" class="updated" itemprop="dateModified">
+  Updated on 9月 01
+</time>
+
+</span>
+
+          <br>
+          
+
+
+          
+        </div>
+        <h1 class="title" itemprop="name">
+          <a href="/2013/08/24/pro-active-steps-to-prevent-procrastination/">Pro-Active Steps to Prevent Procrastination</a>
+        </h1>
+    </article>
+    
   
-  <div class="clearfix"></div>
-</nav>
-</div>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
+    
+    
+    
+      <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="meta">
+          
+<span class="date">
+
+<time datetime="2013-08-23T19:29:02.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  8月 24
+</time>
+
+
+
+
+
+
+</span>
+
+          <br>
+          
+
+
+          
+        </div>
+        <h1 class="title" itemprop="name">
+          <a href="/2013/08/24/photoshop’s-role-in-a-web-design-workflow/">Photoshop’s Role in a Web Design Workflow</a>
+        </h1>
+    </article>
+    
   
-  &copy; 2013 nierong
+    
+    
+    
+      <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="meta">
+          
+<span class="date">
+
+<time datetime="2013-07-24T18:25:00.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  7月 25
+</time>
+
+
+
+
+
+
+<br>
+<time datetime="2013-09-01T11:36:41.000Z" class="updated" itemprop="dateModified">
+  Updated on 9月 01
+</time>
+
+</span>
+
+          <br>
+          
+
+
+          
+        </div>
+        <h1 class="title" itemprop="name">
+          <a href="/2013/07/25/secrets-of-the-browser-developer-tools/">Secrets of the Browser Developer Tools</a>
+        </h1>
+    </article>
+    
+  
+    
+    
+    
+      <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="meta">
+          
+<span class="date">
+
+<time datetime="2013-01-19T14:53:19.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  1月 19
+</time>
+
+
+
+
+
+
+<br>
+<time datetime="2013-08-20T19:31:32.000Z" class="updated" itemprop="dateModified">
+  Updated on 8月 21
+</time>
+
+</span>
+
+          <br>
+          
+
+
+          
+        </div>
+        <h1 class="title" itemprop="name">
+          <a href="/2013/01/19/Hello/">Hello!</a>
+        </h1>
+    </article>
+    
   
 </div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+</div>
+	</div>
+        <footer id="footer" class="inner">
+          Copyright © 2013 - nierong - Powered by <a href="https://github.com/tommy351/hexo">Hexo</a><br>
+- Ported theme <a href="https://github.com/nuklly/hexo-theme-greyshade">GreyShade</a> -
+        </footer>
+        
+<script src="/js/slash.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
 
 <script type="text/javascript">
-var disqus_shortname = 'nirgone';
+  var disqus_shortname = 'nirgone';
 
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-</script>
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+  </script>
+
+
+
 
 
 
@@ -624,5 +323,10 @@ var disqus_shortname = 'nirgone';
 })(jQuery);
 </script>
 
+
+
+
+      </div><!-- mid-col -->
+    </div><!-- container -->
 </body>
 </html>
