@@ -198,6 +198,10 @@ One of the best ways of overcoming procrastination however is effective time man
 <script src="/js/prettify.js"></script>
 <script src="/js/jquery-2.0.1.min.js"></script>
 	<script type="text/javascript">
+    $(window).load(function(){
+     $("pre").addClass("prettyprint");
+     prettyPrint();
+        });
 	$(document).ready(function()         
 	{	
 		$('.navbar').click(function(){
@@ -221,8 +225,6 @@ One of the best ways of overcoming procrastination however is effective time man
 				$('nav').css('display', 'none') ;
 			}
         });
-     $("pre").addClass("prettyprint linenums");
-     prettyPrint();
      $('.closeaside').click(function(){
             $('#asidepart').fadeOut();
             $('#main').animate({
