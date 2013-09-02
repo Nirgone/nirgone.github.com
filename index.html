@@ -704,9 +704,6 @@
 <script src="/js/slash.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
-<script src="/js/jquery-2.0.1.min.js"></script>
-<script src="/js/prettify.js"></script>
-
 
 <script>
     (function($) {
@@ -724,51 +721,7 @@
          $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>
-	<script type="text/javascript">
-	$(document).ready(function()         
-	{	
-		$('.navbar').click(function(){
-			$('header nav').slideToggle("slow");
-		});
-		var myWidth = 0;
-    	function getSize(){
-    		if( typeof( window.innerWidth ) == 'number' ) {
-    			myWidth = window.innerWidth;
-           	 } else if( document.documentElement && document.documentElement.clientWidth) {
-             	myWidth = document.documentElement.clientWidth;
-            };
-        };
-    	getSize(); 
-    	//document.getElementById("test").innerHTML =myWidth;
-        $(window).resize(function(){
-        	getSize(); 
-        	if (myWidth >= 1024||(document.activeElement.id=='search')) {
-        		$('nav').css('display', 'block') ;
-			}else{
-				$('nav').css('display', 'none') ;
-			}
-        });
-     $('.closeaside').click(function(){
-            $('#asidepart').fadeOut();
-            $('#main').animate({
-                marginLeft: ['10%','swing'],
-                marginRight: ['10%','swing']
-            });
-            $('.openaside').fadeIn();  
-        });
-        $('.openaside').click(function(){
-            $('#asidepart').fadeIn();
-            $('#main').animate({
-                marginLeft: ['0%','swing'],
-                marginRight: ['0%','swing']
-            });
-            $('.openaside').fadeOut();  
-        });
-        $(window).scroll(function(){
-            $('.openaside').css("top",Math.max(50,260-$(this).scrollTop()));
-        });
-	});
-</script>
+
 
 <script type="text/javascript">
   var disqus_shortname = 'nirgone';
