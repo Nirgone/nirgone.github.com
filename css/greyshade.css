@@ -108,6 +108,12 @@ body {
 .container .mid-col .mid-col-container #content article .entry-content .more-link:before {
   line-height: 1.4em;
 }
+.container .mid-col .mid-col-container #content article .entry-content .gist .gist-file .gist-data .line_numbers {
+  line-height: inherit;
+}
+.container .mid-col .mid-col-container #content article .entry-content .gist .gist-file .gist-data pre {
+  line-height: inherit;
+}
 .container .mid-col .mid-col-container #content article .entry-content h2 {
   font-size: 1.3em;
   color: #574c4c;
