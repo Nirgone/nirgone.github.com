@@ -118,32 +118,28 @@
 </pre></figure></code></pre>
 <p>这个技巧相当嚣张，同样适用于没固定大小的内容，<code>min-width</code>，<code>max-height</code>，<code>overflow:scroll</code> 等。 </p>
 <h2>绝对定位居中</h2>
-<p>父容器元素：`position:relat
-    <pre><br>    .Absolute-Center {
-      width: 50%;
-      height: 50%;
-      overflow: auto;
-      margin: auto;
-      position: absolute;
-      top: 0; left: 0; bottom: 0; ri;
-    }<br>    </pre></p>
+<p>父容器元素：`position:relat</p>
+<pre><code><figure class="highlight"><pre>.<span class="class">Absolute</span>-<span class="class">Center</span> {
+  <span class="method">width:</span> <span class="number">50</span>%;
+  <span class="method">height:</span> <span class="number">50</span>%;
+  <span class="method">overflow:</span> auto;
+  <span class="method">margin:</span> auto;
+  <span class="method">position:</span> absolute;
+  <span class="method">top:</span> <span class="number">0</span>; <span class="method">left:</span> <span class="number">0</span>; <span class="method">bottom:</span> <span class="number">0</span>; ri;
+}        
+</pre></figure></code></pre>
 <p><strong>注意：高度必须定义，建议加 <code>overflow: auto</code>，防止内容溢出。</strong></p>
 <h4>视口居中</h4>
 <p>内容元素：<code>position: fixed</code>，<code>z-index: 999</code>，记住父容器元素ition:    relave`</p>
-<pre>
-
-
-    .Absolute-Center.is-Fixed {
-      width: 50%;
-      height: 50%;
-      overflow: auto;
-      margin: auto;
-      position: fixed;
-      top: 0; left: 0; bottom: 0; right:    z-idex: 999;
-    }
-
-   </pre> 
-
+<pre><code><figure class="highlight"><pre><span class="class">.Absolute-Center</span><span class="class">.is-Fixed</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span>
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50</span>%;</span></span>
+  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> auto;</span></span>
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> auto;</span></span>
+  <span class="rule"><span class="attribute">position</span>:<span class="value"> fixed;</span></span>
+  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span>;</span></span> <span class="rule"><span class="attribute">right</span>:<span class="value">    z-idex: <span class="number">999</span>;</span></span>
+<span class="rule">}</span></span>
+</pre></figure></code></pre>
 <p><a href="http://codepen.io/shshaw/full/gEiDt#Fixed">模态窗口实例</a></p>
 <h4>响应式</h4>
 <p>百分比宽高，最大、最小宽度均可以，加 padding 也可以 </p>
