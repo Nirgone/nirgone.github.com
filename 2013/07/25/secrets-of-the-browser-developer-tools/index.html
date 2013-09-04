@@ -175,13 +175,14 @@
 <li>右键选择“Inspect Element 检查元素”</li>
 <li>Safari 需要在 首选项 &gt; 高级 &gt; 显示开发菜单，启用开发工具</li>
 <li><p>Firebug 是 Firefox 扩展，需要[在此][3]安装</p>
-<p>[3]: <a href="http://getfirebug.com/">http://getfirebug.com/</a>
-<a name="more"></a></p>
-<h3>用最新的开发版</h3>
+<p>[3]: <a href="http://getfirebug.com/">http://getfirebug.com/</a></p>
 </li>
 </ul>
+<h3>用最新的开发版</h3>
 <p>开发工具会不断完善，在开发版可以体验。 <a href="https://www.google.com/intl/zh-CN/chrome/browser/canary.html">Chrome Canary</a> 是 Chrome 实验版，Canary 和 Chrome 可以同时安装。 你可以通过 <code>chrome://flags</code> 进一步加强你的 Chrome 开发工具 ，启用“Enable Developer Tools experiments （启用开发工具实验）”。不要忘了点击页面底部的“现在重启”按钮。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/c.png" alt=""></p>
+<a name="more"></a>
+
 <p><a href="http://www.mozilla.org/en-US/firefox/aurora/">Firefox Aurora</a> 提供 Firefox 最新特性预览。不幸的是，Aurora 不能和 Firefox 同时打开。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/f.png" alt=""></p>
 <p><a href="http://nightly.webkit.org/">Webkit Nightly</a> 是 Safari 测试版，因此有些不稳定。Webkit Nightly 可以和 Safari 同时运行。 </p>
@@ -315,11 +316,7 @@
 <pre><code><figure class="highlight"><pre><span class="comment">sass</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span> <span class="comment">scss/devtoolsecrets</span>.<span class="comment">scss:css/devtoolsecrets</span>.<span class="comment">min</span>.<span class="comment">css</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">style</span> <span class="comment">compressed</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">sourcemap
 </pre></figure></code></pre>
 <p>然后在 SASS 文件底部添加映射文件的名字（sourceMappingURL）： </p>
-<pre><code><figure class="highlight"><pre><span class="number">1</span>
-
-
-
-/<span class="variable">*@</span> sourceMappingURL=devtoolsecrets.css.<span class="keyword">map</span> <span class="variable">*/</span>
+<pre><code><figure class="highlight"><pre>/<span class="variable">*@</span> sourceMappingURL=devtoolsecrets.css.<span class="keyword">map</span> <span class="variable">*/</span>
 </pre></figure></code></pre>
 <p>然后，你需要启用“Experiments 实验”。地址栏输入 <strong>chrome://flags</strong> 启用“启用开发者工具实验”选项，点击页面底部“马上重启”按钮应用改变。在 Chrome 开发工具的右下角，点击齿轮按钮打开“设置”面板。 </p>
 <p>点击“General 常规”标签，激活“Enable Source Maps 启用 Source Maps”。点击“Experiments 实验”标签，检查“Support for SASS 支持 SASS ”选项。 </p>
