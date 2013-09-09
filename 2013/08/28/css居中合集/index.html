@@ -18,9 +18,10 @@
     <link rel="alternate" href="/atom.xml" title="all is well" type="application/atom+xml">
     <link rel="stylesheet" href="/css/lib/font-awesome.css" type="text/css">
     <link rel="stylesheet" href="/css/lib/normalize.css" type="text/css">
-    <link rel="stylesheet" href="/css/lib/furatto.css" type="text/css">
     <link rel="stylesheet" href="/css/lib/duoshuo_style.css" type="text/css">
+    <link rel="stylesheet" href="/css/lib/furatto.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
 
     
         <link rel="stylesheet" href="/css/lib/prettify_raytaylorism.css" type="text/css">
@@ -28,25 +29,24 @@
     
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="/js/jquery-1.10.2.min.js"></script>
-    <script src="/js/jquery.jpanelmenu.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    
 </head>
 
 
-<body class="container-fluid">
-    <header id="page-header">
+<body>
+    <header id="page-header"> 
         <div class="navbar inverse-navbar">
     <div class="navbar-inner">
         <div class="container-center">
-            <a href="#menu" class="menu-trigger" data-meteocon="M">
-                <i class="icon-reorder"></i>
+            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M">
             </a>
             <div class="nav-collapse navbar-responsive-collapse collapse">
                 <nav id="menu">
                     <ul class="nav">
-                        <li><a class="brand" href="index.html">all is well</a></li>
+                        <li><a class="brand" href="javascript:void(0)">all is well</a></li>
                     </ul>
-                    <div class="pull-right nav">
+                    <div class="pull-right">
                         
                             <a href="/" class="btn btn-primary btn-large">
                                 <i class="icon-home icon-white"></i>
@@ -65,33 +65,6 @@
                         
                     </div>
                 </nav>
-                <nav id="jPanelMenu-menu-side">
-    <ul class="nav">
-        <li><a class="brand" href="index.html">all is well</a></li>
-        
-            <li>
-                <a href="/">
-                    <i class="icon-home icon-white"></i>
-                    首页
-                </a>
-            </li>
-        
-            <li>
-                <a href="/archives">
-                    <i class="icon-archive icon-white"></i>
-                    存档
-                </a>
-            </li>
-        
-            <li>
-                <a href="/about">
-                    <i class="icon-user icon-white"></i>
-                    关于
-                </a>
-            </li>
-        
-    </ul>
-</nav>
             </div>
         </div>
     </div>
@@ -99,7 +72,10 @@
 
     </header>
     <div id="content-wrapper">
-        <article class="post">
+        <div class="container-center main-content">
+            <div class="row-fluid">
+                <div class="span12">
+                    <article class="post">
     <div class="article-title article-title-big">
         
     
@@ -372,29 +348,35 @@
 </section>
 
 
+                </div>
+            </div>
+        </div>
     </div>
     <footer id="page-footer"><div class="footer-content">
     <div class="container-center">
         <div class="footer-text pull-left">
+        
+            <div class="theme-copyright">
+              <strong>    
+                      Stay hungry. Stay foolish.
+              </strong>
+            </div>
+            
             <div class="copyright">
                 
                 Copyright &copy; 2013 <a href="/">Rong Nie</a>
                 
             </div>
-            <div class="theme-copyright">
-                <span>Blog powered by <a href="http://zespia.tw/hexo/zh-CN/">hexo</a></span>
-                Theme <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a> desgined by <strong>Nix</strong>
-            </div>
+
+           
         </div>
         <div class="social-group pull-right">
             
-            <a href="https://github.com/raytaylorlin" target="_blank" title="github"><i class="icon-github"></i></a>
+            <a href="https://github.com/nirgone" target="_blank" title="github"><i class="icon-github"></i></a>
             
             
-            <a href="http://weibo.com/1956184117" target="_blank" title="新浪微博"><i class="icon-weibo"></i></a>
+            <a href="http://weibo.com/nierg" target="_blank" title="新浪微博"><i class="icon-weibo"></i></a>
             
-            
-            <a href="http://www.renren.com/309069699" target="_blank" title="人人网"><i class="icon-renren"></i></a>
             
         </div>
         <div class="clearfix"></div>
@@ -411,6 +393,7 @@
     });
 </script>
 
+
 <script>
     (function($) {
         //当内容区内容不够长时，设置内容区域的高度使footer沉底
@@ -421,70 +404,13 @@
                 minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
             if(contentHeight < minHeight) {
                 $('#content-wrapper').height(minHeight);
-            } else {
-                $('#content-wrapper').css({height: 'auto'});
             }
-        };
-
-        //响应式侧边栏
-        var initJPanelMenu = function() {
-            var jPM = $.jPanelMenu({
-                menu: '#jPanelMenu-menu-side',
-                duration: 500
-            });
-            jPM.on();
-        };
-
-        var pagination = function() {
-            var PER_PAGE_NUM = showNum = 5,
-                i,
-                initHeight = 0,
-                outerHeightList = [],
-                articleList = $('#content-wrapper article'),
-                articleNum = articleList.length;
-
-            for(i = 0; i < articleList.length; i++) {
-                outerHeightList.push($(articleList[i]).outerHeight());
-                if(i >= PER_PAGE_NUM) {
-                    $(articleList[i]).hide();
-                }
-            }
-
-            $('.btn-loadmore').click(function() {
-                var deltaH = 0,
-                    toShowList = [];
-                for(i = showNum, showNum += PER_PAGE_NUM; i < showNum; i++) {
-                    if(i >= articleList.length) {
-                        $('.btn-loadmore').html("已经到底啦");
-                        break;
-                    }
-                    toShowList.push($(articleList[i]));
-                    deltaH += outerHeightList[i];
-                }
-                $('body').animate({
-                    scrollTop: $('#article-list').height()
-                });
-                $('#article-list').animate({
-                    height: "+=" + deltaH
-                }, 1000, function() {
-                    for(i = 0; i < toShowList.length; i++) {
-                        toShowList[i].css({opacity: 0});
-                        toShowList[i].show();
-                        toShowList[i].animate({
-                            opacity: 1
-                        }, 1000);
-                    }
-                });
-            });
-            resizeContentWrapper();
-        };
-
-        $(document).ready(pagination);
-        $(document).ready(resizeContentWrapper);
-        $(document).ready(initJPanelMenu);
-        
-        $(window).resize(resizeContentWrapper);
+         };
+         $(document).ready(resizeContentWrapper);
+         $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>
+
+
 </body>
 </html>
