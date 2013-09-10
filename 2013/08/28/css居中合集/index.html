@@ -121,21 +121,13 @@
   <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">50</span>%;</span></span>
   <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">50</span>%;</span></span>
 
-  <span class="comment">/*
-  不是 =(
-  margin-left: -25%;
-  margin-top: -25%;
-  */</span>
+  <span class="comment">/*不是 =(margin-left: -25%; margin-top: -25%;*/</span>
+  <span class="comment">/*而是!*/</span>      
 
-  <span class="comment">/* 
-  而是!
-  */</span>
   <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translate(-<span class="number">50</span>%, -<span class="number">50</span>%)</span>;</span></span>
 
-  <span class="comment">/*
-  甚至不要定义 
-  比如：Height 可以缺省!
-  */</span>
+  <span class="comment">/*甚至不要定义,比如：Height 可以缺省!*/</span>
+
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>%;</span></span>
   <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50</span>%;</span></span>
 <span class="rule">}</span></span>
@@ -143,7 +135,8 @@
 <p>加上所有需要的前缀。<br>示例： </p>
 <pre><code><figure class="highlight"><pre><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
   <span class="id">#ex3_container</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">yellow;</span></span> <span class="rule"><span class="attribute">position</span>:<span class="value">relative;</span></span> <span class="rule">}</span></span>
-  <span class="id">#ex3_content</span> <span class="rules">{ <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">top</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> <span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value">gray;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value">white;</span></span> <span class="rule"><span class="attribute">position</span>:<span class="value">absolute;</span></span> <span class="rule">}</span></span>
+  <span class="id">#ex3_content</span> <span class="rules">{ <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">top</span>:<span class="value"><span class="number">50</span>%;</span></span> <span class="rule"><span class="attribute">transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> <span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"><span class="function">translate(-<span class="number">50</span>%,-<span class="number">50</span>%)</span>;</span></span> 
+                 <span class="rule"><span class="attribute">background-color</span>:<span class="value">gray;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value">white;</span></span> <span class="rule"><span class="attribute">position</span>:<span class="value">absolute;</span></span> <span class="rule">}</span></span>
 </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_container"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"ex3_content"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </pre></figure></code></pre>
