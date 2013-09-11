@@ -76,7 +76,7 @@ hr {
 .navbar-inner {
   max-height: 30px;
   padding: 16px 0;
-  background: #23314e;
+  background: #eee;
 }
 .navbar .brand {
   font-size: 30px;
@@ -89,11 +89,11 @@ hr {
   padding: 19px 19px;
 }
 .btn-primary {
-  background-color: #23314e;
+  background-color: #eee;
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #3498db;
+  background-color: #f90;
 }
 article {
   font-size: 13px;
