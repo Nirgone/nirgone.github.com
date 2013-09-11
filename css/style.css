@@ -96,7 +96,7 @@ hr {
   background-color: #3498db;
 }
 article {
-  font-size: 14px;
+  font-size: 13px;
 /* simple_article CSS start */
 /* simple_article CSS end */
 }
@@ -340,7 +340,7 @@ article footer .tags:before {
 }
 #page-footer {
   font-size: 20px;
-  background-color: #e8edf1;
+  background-color: #777;
   color: #fff;
   overflow: hidden;
 }
