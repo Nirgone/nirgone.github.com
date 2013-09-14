@@ -65,7 +65,7 @@ hr {
   padding: 20px 0;
 }
 #comment {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 #page-header {
   margin-bottom: 0;
@@ -74,12 +74,12 @@ hr {
   margin-bottom: 0;
 }
 .navbar-inner {
-  max-height: 30px;
+  max-height: 22px;
   padding: 16px 0;
   background: #23314e;
 }
 .navbar .brand {
-  font-size: 30px;
+  font-size: 1.6em;
   font-weight: 400;
 }
 .navbar .nav>li>a {
@@ -343,11 +343,11 @@ article footer .tags:before {
   background-color: #777;
   color: #fff;
   overflow: hidden;
-  height: 60px;
+  min-height: 60px;
 }
 .footer-content {
   padding: 16px 0;
-  height: 30px;
+  max-height: 30px;
 }
 .footer-text {
   padding-top: 4px;
