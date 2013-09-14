@@ -90,6 +90,7 @@ li {
   margin-bottom: 0;
 }
 .navbar-inner {
+  max-height: 25px;
   padding: 10px 0;
   background: #23314e;
 }
@@ -110,7 +111,7 @@ li {
   }
 }
 .navbar .brand {
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 400;
 }
 .navbar .nav>li>a {
@@ -281,7 +282,7 @@ article .entry pre {
   word-wrap: break-word;
 }
 article .entry code {
-  font-size: 16px;
+  font-size: 13px;
   padding: 0;
   margin: 0;
 }
@@ -359,7 +360,7 @@ article .entry p code {
   margin-top: 40px;
 }
 #comment .title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   color: color-section-title;
 }
