@@ -1,5 +1,6 @@
 html {
   font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
+  font-size: 13px;
   background: color-background;
   background: color-background -webkit-gradient(linear, left top, left bottom, color-stop(0, #00ade3), color-stop(0.33333333333333326, #080046), color-stop(1, #000)) fixed;
   background: color-background -webkit-linear-gradient(top, #00ade3 0%, #080046 33.33333333333333%, #000 100%) fixed;
@@ -90,12 +91,12 @@ li {
   margin-bottom: 0;
 }
 .navbar-inner {
-  max-height: 25px;
+  max-height: 23px;
   padding: 10px 0;
   background: #23314e;
 }
 .navbar .menu-trigger {
-  font-size: 2em;
+  font-size: 1.9em;
   padding-top: 0;
   margin-bottom: 0;
 }
