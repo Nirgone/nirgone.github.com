@@ -60,7 +60,7 @@ hr {
 }
 .container-center {
   width: 70%;
-  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .main-content {
   padding: 20px 0;
@@ -70,13 +70,13 @@ hr {
 }
 #page-header {
   margin-bottom: 0;
-  max-height: 65px;
+  max-height: 45px;
 }
 .navbar {
   margin-bottom: 0;
 }
 .navbar-inner {
-  max-height: 20px;
+  min-height: 30px;
   padding: 16px 0;
   background: #23314e;
 }
