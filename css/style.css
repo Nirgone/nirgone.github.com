@@ -74,7 +74,7 @@ hr {
   margin-bottom: 0;
 }
 .navbar-inner {
-  max-height: 22px;
+  max-height: 23px;
   padding: 16px 0;
   background: #23314e;
 }
@@ -343,11 +343,11 @@ article footer .tags:before {
   background-color: #777;
   color: #fff;
   overflow: hidden;
-  min-height: 50px;
+  max-height: 50px;
 }
 .footer-content {
   padding: 16px 0;
-  max-height: 30px;
+  max-height: 25px;
 }
 .footer-text {
   padding-top: 4px;
