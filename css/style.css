@@ -78,6 +78,22 @@ hr {
   padding: 16px 0;
   background: #23314e;
 }
+.navbar .menu-trigger {
+  font-size: 1.9em;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 979px) {
+  .navbar .menu-trigger {
+    line-height: inherit;
+  }
+}
+@media (max-width: 767px) {
+  .navbar .menu-trigger {
+    line-height: inherit;
+    font-size: 2.8em;
+  }
+}
 .navbar .brand {
   font-size: 1.6em;
   font-weight: 400;
@@ -339,15 +355,13 @@ article footer .tags:before {
   left: 2px;
 }
 #page-footer {
-  font-size: 20px;
+  font-size: 1em;
   background-color: #777;
   color: #fff;
   overflow: hidden;
-  max-height: 50px;
 }
 .footer-content {
   padding: 16px 0;
-  max-height: 25px;
 }
 .footer-text {
   padding-top: 4px;
@@ -361,7 +375,7 @@ article footer .tags:before {
 }
 .social-group {
   width: 5em;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 .social-group a {
   color: #fff;
