@@ -343,7 +343,7 @@ article footer .tags:before {
   background-color: #777;
   color: #fff;
   overflow: hidden;
-  min-height: 60px;
+  min-height: 50px;
 }
 .footer-content {
   padding: 16px 0;
