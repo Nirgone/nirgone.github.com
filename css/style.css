@@ -76,7 +76,7 @@ hr {
   margin-bottom: 0;
 }
 .navbar-inner {
-  min-height: 30px;
+  max-height: 20px;
   padding: 16px 0;
   background: #23314e;
 }
