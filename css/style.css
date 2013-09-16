@@ -422,7 +422,7 @@ figure.highlight .gutter pre {
 }
 pre,
 code {
-  background: #93aaac;
+  background: color-simple-code-background;
 }
 pre .keyword {
   color: #859900;
