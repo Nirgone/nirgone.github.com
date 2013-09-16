@@ -1,118 +1,64 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
-    <title>css居中合集 | All Is Well</title>
-    <meta name="author" content="Rong Nie">
-    
-    <meta name="description" content="javascript, css, and design">
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="utf-8">
+  
+  <title>css居中合集 | All Is Well</title>
+  <meta name="author" content="Rong Nie">
+  
+  <meta name="description" content="javascript, css, and design">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="css居中合集"/>
-    <meta property="og:site_name" content="All Is Well"/>
+  <meta property="og:title" content="css居中合集"/>
+  <meta property="og:site_name" content="All Is Well"/>
 
-    <link rel="alternate" href="/atom.xml" title="All Is Well" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/lib/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="/css/lib/normalize.css" type="text/css">
-    <link rel="stylesheet" href="/css/lib/furatto.css" type="text/css">
-    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+    <meta property="og:image" content="undefined"/>
+  
 
-    
-        <link rel="stylesheet" href="/css/lib/prettify_raytaylorism.css" type="text/css">
-        
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="/js/jquery-1.10.2.min.js"></script>
-    <script src="/js/jquery.jpanelmenu.js"></script>
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="All Is Well" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
 </head>
 
 
-<body class="container-fluid">
-    <header id="page-header">
-        <div class="navbar inverse-navbar">
-    <div class="navbar-inner">
-        <div class="container-center">
-            <a href="index.html" class="menu-trigger" data-meteocon="M">
-                <i class="icon-reorder"></i>
-            </a>
-            <div class="nav-collapse navbar-responsive-collapse collapse">
-                <nav id="menu">
-                    <ul class="nav">
-                        <li><a class="brand" href="index.html">All Is Well</a></li>
-                    </ul>
-                    <div class="pull-right nav">
-                        
-                            <a href="/" class="btn btn-primary btn-large">
-                                <i class="icon-home icon-white"></i>
-                                首页
-                            </a>
-                        
-                            <a href="/archives" class="btn btn-primary btn-large">
-                                <i class="icon-archive icon-white"></i>
-                                存档
-                            </a>
-                        
-                            <a href="/about" class="btn btn-primary btn-large">
-                                <i class="icon-user icon-white"></i>
-                                关于
-                            </a>
-                        
-                    </div>
-                </nav>
-                <nav id="jPanelMenu-menu-side">
-    <ul class="nav">
-        <li><a class="brand" href="index.html">All Is Well</a></li>
-        
-            <li>
-                <a href="/">
-                    <i class="icon-home icon-white"></i>
-                    首页
-                </a>
-            </li>
-        
-            <li>
-                <a href="/archives">
-                    <i class="icon-archive icon-white"></i>
-                    存档
-                </a>
-            </li>
-        
-            <li>
-                <a href="/about">
-                    <i class="icon-user icon-white"></i>
-                    关于
-                </a>
-            </li>
-        
-    </ul>
-</nav>
-            </div>
-        </div>
-    </div>
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">All Is Well</a></h1>
+  <h2><a href="/">javascript, css, and design</a></h2>
 </div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-07-27T18:43:41.000Z"><a href="/2012/07/28/css居中合集/">7月 28 2012</a></time>
+      
+      
+  
+    <h1 class="title">css居中合集</h1>
+  
 
     </header>
-    <div id="content-wrapper">
-        <div class="container-center">
-        <article class="post">
-    <div class="article-title article-title-big">
-        
-    
-        <h1>css居中合集</h1>
-    
-
-    </div>
-
-    <div class="date-row ">
-        <time datetime="2012-07-27T18:43:41.000Z">7月 28 2012</time>
-    </div>
-
     <div class="entry">
+      
         <p>css居中的一些方法，每种方法各有利弊，适合着用</p>
 <h2>center label</h2>
 <p>不建议用了。 </p>
@@ -136,7 +82,7 @@
 <h5>居中百分比宽高的元素</h5>
 <p>如果知道该元素确切的宽高，居中它比较容易，可以<a href="http://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/" target="_blank">参考此文</a> ，<code>top</code> 和 <code>left</code> 设成 50%，负 <code>margin</code> 分别设置该元素宽，高的一半。如果明确知道该元素的宽高，用此法居中很容易，如果它的宽高是百分比呢？ </p>
 <p>你可能认为负的百分比 margin 可以搞定，它适用于水平的 margin，但是 margin 基于宽度（垂直 margin 也是）（译者注：margin 是百分比的话，跟此元素的包含块的宽度有关，<a href="http://www.w3.org/TR/CSS2/box.html#margin-properties" target="_blank">见规范</a>），因此当你用负的 top margin 时，失败了。 </p>
-<p>有个<a href="http://css-tricks.com/centering-in-the-unknown/" target="_blank">小技巧</a> ，用一个“ghost”伪元素（看不见的伪元素）和 <code>inline-block</code> / <code>vertical-align</code> 可以搞定居中，非常巧妙。但是这个方法要求待居中的元素是 <code>inline-block</code>，不是一个真正通用的方案。可能你想居中一个模态窗口，受小屏幕 / 响应式设计所限，你很可能会把对话框设���成百分比宽度（或者其它未知情况，比如仅有 <code>max-width</code> 最大宽度。） </p>
+<p>有个<a href="http://css-tricks.com/centering-in-the-unknown/" target="_blank">小技巧</a> ，用一个“ghost”伪元素（看不见的伪元素）和 <code>inline-block</code> / <code>vertical-align</code> 可以搞定居中，非常巧妙。但是这个方法要求待居中的元素是 <code>inline-block</code>，不是一个真正通用的方案。可能你想居中一个模态窗口，受小屏幕 / 响应式设计所限，你很可能会把对话框设计成百分比宽度（或者其它未知情况，比如仅有 <code>max-width</code> 最大宽度。） </p>
 <p>有一种方案！Mary Lou 在 Codrops 用到的，她的文章 / 示例：<a href="http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/" target="_blank">漂亮的模态窗口效果</a> 。 </p>
 <p>不能用负的 margin ，可以用负的 <code>translate()</code> 代替。 </p>
 <pre><code><span class="class">.center</span> <span class="rules">{
@@ -309,267 +255,89 @@
 </em> <a href="http://blog.themeforest.net/tutorials/vertical-centering-with-css/" target="_blank">Vertical Centering With CSS</a></p>
 </blockquote>
 
+      
     </div>
-    
-    <footer >
+    <footer>
+      
         
-            
-            
-    
-    <div class="tags-row">
-        标签：<a class="btn btn-info" href="/tags/css/">css</a>
-    </div>
+        
+  
+  <div class="tags">
+    <a href="/tags/css/">css</a>
+  </div>
 
         
-        <div class="clearfix"></div>
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
-
-
-<section id="comment">
-    <h1 class="page-sub-title">留言</h1>
-    <!-- Duoshuo Comment BEGIN -->
-    <div class="ds-thread" data-title="css居中合集">
-
-    <script type="text/javascript">
-        var duoshuoQuery = {short_name:"nirgone"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';
-            ds.async = true;
-            ds.src = 'http://static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-    </script>
-    <!-- Duoshuo Comment END -->
-    </div>
-</section>
-
-
-        </div>
-    </div>
-    <footer id="page-footer"><div class="footer-content">
-    <div class="container-center">
-        <div class="footer-text pull-left">
-            <div class="copyright">
-                
-                Copyright &copy; 2013 <a href="/">Rong Nie</a>
-                
-            </div>
-            <div class="theme-copyright">
-                <span>Blog powered by <a href="http://zespia.tw/hexo/zh-CN/">hexo</a></span>
-                Theme <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a> desgined by <strong>Nix</strong>
-            </div>
-        </div>
-        <div class="social-group pull-right">
-            
-            <a href="https://github.com/raytaylorlin" target="_blank" title="github"><i class="icon-github"></i></a>
-            
-            
-            <a href="http://weibo.com/1956184117" target="_blank" title="新浪微博"><i class="icon-weibo"></i></a>
-            
-            
-            <a href="http://www.renren.com/309069699" target="_blank" title="人人网"><i class="icon-renren"></i></a>
-            
-        </div>
-        <div class="clearfix"></div>
-    </div>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:niefy.com">
+  </form>
 </div>
-</footer>
-    
 
-<script src="/js/prettify.js"></script>
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/css/">css</a><small>1</small></li>
+  
+    <li><a href="/tags/debug/">debug</a><small>1</small></li>
+  
+    <li><a href="/tags/design/">design</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 Rong Nie
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $("pre").addClass("prettyprint");
-        prettyPrint();
-    });
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
-<script>
-    (function($) {
-        //当内容区内容不够长时，设置内容区域的高度使footer沉底
-        var resizeContentWrapper = function() {
-            var contentHeight = Math.floor($('#content-wrapper .container-center').height()),
-                headerHeight = Math.floor($('#page-header').height()),
-                footerHeight = Math.floor($('#page-footer').height()),
-                minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
-            if(contentHeight < minHeight) {
-                $('#content-wrapper').height(minHeight);
-            } else {
-                $('#content-wrapper').css({height: 'auto'});
-            }
-        };
-
-        //响应式侧边栏
-        var initJPanelMenu = function() {
-            var jPM = $.jPanelMenu({
-                menu: '#jPanelMenu-menu-side',
-                duration: 500
-            });
-            jPM.on();
-        };
-
-        //按一定数目显示博文条目
-        var pagination = function() {
-            var PER_PAGE_NUM = showNum = 5,
-                i,
-                initHeight = 0,
-                outerHeightList = [],
-                articleList = $('#content-wrapper article'),
-                articleNum = articleList.length;
-
-            for(i = 0; i < articleList.length; i++) {
-                outerHeightList.push($(articleList[i]).outerHeight());
-                if(i >= PER_PAGE_NUM) {
-                    $(articleList[i]).hide();
-                }
-            }
-
-            $('.btn-loadmore').click(function() {
-                var deltaH = 0,
-                    toShowList = [];
-                for(i = showNum, showNum += PER_PAGE_NUM; i < showNum; i++) {
-                    if(i >= articleList.length) {
-                        $('.btn-loadmore').html("已经到底啦");
-                        break;
-                    }
-                    toShowList.push($(articleList[i]));
-                    deltaH += outerHeightList[i];
-                }
-                $('body').animate({
-                    scrollTop: $('#article-list').height()
-                });
-                $('#article-list').animate({
-                    height: "+=" + deltaH
-                }, 1000, function() {
-                    for(i = 0; i < toShowList.length; i++) {
-                        toShowList[i].css({opacity: 0});
-                        toShowList[i].show();
-                        toShowList[i].animate({
-                            opacity: 1
-                        }, 1000);
-                    }
-                });
-            });
-            resizeContentWrapper();
-        };
-
-        //检测是否有新的功能，并提示用户
-        var checkNewFeature = function() {
-            //设置本地存储
-            var setStorage = window.localStorage ?
-                //若支持HTML5的localStorage则使用localStorage
-                function(key, value) {
-                    window.localStorage[key] = value;
-                } : 
-                //否则使用cookie存储
-                function(key, value){
-                    var exdate = new Date(),
-                        expireDays = 15;    //cookie过期时间15天
-                    exdate.setDate(exdate.getDate() + expiredays);
-                    document.cookie = key + '=' + escape(value) + ';expires=' + exdate.toGMTString();
-                };
-            //获取本地存储
-            var getStorage = window.localStorage ?
-                function(key) {
-                    return window.localStorage[key] || null;
-                } :
-                function(key) {
-                    if (document.cookie.length > 0) {
-                        var start = document.cookie.indexOf(key + '='),
-                            end;
-                        if (start !== -1) {
-                            start = start + key.length + 1;
-                            end = document.cookie.indexOf(';', start);
-                            if (end === -1) {
-                                end = document.cookie.length;
-                            }
-                            return unescape(document.cookie.substring(start, end));
-                        } else {
-                            return null;
-                        }
-                    }
-                    return null;
-                };
-
-            var 
-                //新功能特征值，以此识别一个功能点
-                FEATURE_CODE = '588ba45',
-                //新功能高亮提醒的jQuery对象
-                FEATURE_DOM = $('.brand'),
-                //新功能描述
-                FEATURE_DESCRIPTION = '如你所见，这是新功能导航哦。以后如果博客有新功能的话，就会通过这个来让大家知道>_<';
-
-            //存储的key
-            var storageKey = 'raytaylor_world_feature_notify',
-                lastValue = getStorage(storageKey);
-
-            //若本地存储没有特征值，或特征值与最新发布的不一致，则提示用户
-            if(lastValue === null || lastValue !== FEATURE_CODE){
-                //生成阴影div的方法
-                var newShadow = function(className, offset, size) {
-                    var $shadow = $('<div class="' + className + '"></div>');
-                    $shadow.offset(offset);
-                    $shadow.width(size.width);
-                    $shadow.height(size.height);
-                    return $shadow;
-                };
-
-                var $body = $('body'),
-                    $featureBox = $('.feature-box'),
-                    $shadowContainer = $('.shadow-container'),
-                    $featureGuideContainer = $('.feature-guide-container'),
-                    domWidth = FEATURE_DOM.outerWidth(),
-                    domHeight = FEATURE_DOM.outerHeight(),
-                    domLeft = FEATURE_DOM.offset().left,
-                    domTop = FEATURE_DOM.offset().top,
-                    domRight = domLeft + domWidth,
-                    domBottom = domTop + domHeight,
-                    $shadowLeft = newShadow('shadow', {left: 0, top: 0}, {width: domLeft, height: $body.height()}),
-                    $shadowTop = newShadow('shadow', {left: domLeft, top: 0}, {width: domWidth, height: domTop}),
-                    $shadowRight = newShadow('shadow', {left: domRight, top: 0}, {width: $body.width() - domBottom, height: $body.height()}),
-                    $shadowBottom = newShadow('shadow', {left: domLeft, top: domBottom}, {width: domWidth, height: $body.height() - domBottom}),
-                    $shadowLight = newShadow('shadow-light', {left: domLeft, top: domTop}, {width: domWidth, height: domHeight});
-
-                //添加阴影
-                $shadowContainer.append($shadowLeft).append($shadowTop)
-                .append($shadowRight).append($shadowBottom)
-                .append($shadowLight);
-
-                //填充并定位描述内容
-                $featureBox.find('.feature-description').html(FEATURE_DESCRIPTION);
-                $featureBox.offset({left: domLeft, top: domBottom + 20});
-
-                //显示新功能描述
-                $featureGuideContainer.fadeIn('slow');
-                //绑定关闭按钮事件
-                $featureGuideContainer.find('.btn-i-know').click(function() {
-                    $featureGuideContainer.fadeOut('slow');
-                    setStorage(storageKey, FEATURE_CODE);
-                });
-            }
-        };
-
-        $(document).ready(pagination);
-        $(document).ready(resizeContentWrapper);
-        $(document).ready(initJPanelMenu);
-        $(document).ready(checkNewFeature);
-        
-        $(window).resize(resizeContentWrapper);
-    })(jQuery);
-</script>
-    <div class="feature-guide-container">
-    <div class="shadow-container"></div>
-    <div class="feature-box">
-        <p class="feature-description"></p>
-        <a class="btn btn-i-know pull-right" href="javascript:void(0);">我知道了</a>
-        <div class="clearfix"></div>
-    </div>
-</div>
-</div>
 </body>
 </html>
