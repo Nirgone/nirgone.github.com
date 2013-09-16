@@ -420,10 +420,6 @@ figure.highlight .gutter pre {
   border-right: 1px solid #fff;
   height: 100%;
 }
-pre,
-code {
-  background: #042029;
-}
 pre .keyword {
   color: #859900;
 }
