@@ -1,96 +1,66 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
-    <title>Secrets of the Browser Developer Tools | All Is Well</title>
-    <meta name="author" content="Rong Nie">
-    
-    <meta name="description" content="javascript, css, and design">
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="utf-8">
+  
+  <title>Secrets of the Browser Developer Tools | All Is Well</title>
+  <meta name="author" content="Rong Nie">
+  
+  <meta name="description" content="javascript, css, and design">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="Secrets of the Browser Developer Tools"/>
-    <meta property="og:site_name" content="All Is Well"/>
+  <meta property="og:title" content="Secrets of the Browser Developer Tools"/>
+  <meta property="og:site_name" content="All Is Well"/>
 
-    <link rel="alternate" href="/atom.xml" title="All Is Well" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/lib/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="/css/lib/normalize.css" type="text/css">
-    <link rel="stylesheet" href="/css/lib/duoshuo_style.css" type="text/css">
-    <link rel="stylesheet" href="/css/lib/furatto.css" type="text/css">
-    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+    <meta property="og:image" content="undefined"/>
+  
 
-
-    
-        <link rel="stylesheet" href="/css/lib/prettify_raytaylorism.css" type="text/css">
-        
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="All Is Well" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
 </head>
 
 
 <body>
-    <header id="page-header"> 
-        <div class="navbar inverse-navbar">
-    <div class="navbar-inner">
-        <div class="container-center">
-            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M">
-            </a>
-            <div class="nav-collapse navbar-responsive-collapse collapse">
-                <nav id="menu">
-                    <ul class="nav">
-                        <li><a class="brand" href="javascript:void(0)">All Is Well</a></li>
-                    </ul>
-                    <div class="pull-right">
-                        
-                            <a href="/" class="btn btn-primary btn-large">
-                                <i class="icon-home icon-white"></i>
-                                首页
-                            </a>
-                        
-                            <a href="/archives" class="btn btn-primary btn-large">
-                                <i class="icon-archive icon-white"></i>
-                                存档
-                            </a>
-                        
-                            <a href="/aboutme" class="btn btn-primary btn-large">
-                                <i class="icon-user icon-white"></i>
-                                关于
-                            </a>
-                        
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">All Is Well</a></h1>
+  <h2><a href="/">javascript, css, and design</a></h2>
 </div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-24T18:25:00.000Z"><a href="/2012/09/25/secrets-of-the-browser-developer-tools/">9月 25 2012</a></time>
+      
+      
+  
+    <h1 class="title">Secrets of the Browser Developer Tools</h1>
+  
 
     </header>
-    <div id="content-wrapper">
-        <div class="container-center main-content">
-            <div class="row-fluid">
-                <div class="span12">
-                    <article class="post">
-    <div class="article-title article-title-big">
-        
-    
-        <h1>Secrets of the Browser Developer Tools</h1>
-    
-
-    </div>
-
-    <div class="date-row ">
-        <time datetime="2012-09-24T18:25:00.000Z">9月 25 2012</time>
-    </div>
-
     <div class="entry">
+      
         <blockquote>
-<p>源网站：<a href="http://devtoolsecrets.com/">Secrets of the Browser Developer Tools</a>  </p>
+<p>源网站：<a href="http://devtoolsecrets.com/" target="_blank">Secrets of the Browser Developer Tools</a>  </p>
 </blockquote>
 <h2>目录</h2>
 <ul>
@@ -174,18 +144,18 @@
 <li>“Cmd”⌘ +“Option” +“I”（Mac）</li>
 <li>右键选择“Inspect Element 检查元素”</li>
 <li>Safari 需要在 首选项 &gt; 高级 &gt; 显示开发菜单，启用开发工具</li>
-<li>Firebug 是 Firefox 扩展，需要<a href="http://getfirebug.com/">在此</a>安装</li>
+<li>Firebug 是 Firefox 扩展，需要<a href="http://getfirebug.com/" target="_blank">在此</a>安装</li>
 </ul>
 <h3>用最新的开发版</h3>
-<p>开发工具会不断完善，在开发版可以体验。 <a href="https://www.google.com/intl/zh-CN/chrome/browser/canary.html">Chrome Canary</a> 是 Chrome 实验版，Canary 和 Chrome 可以同时安装。 你可以通过 <code>chrome://flags</code> 进一步加强你的 Chrome 开发工具 ，启用“Enable Developer Tools experiments （启用开发工具实验）”。不要忘了点击页面底部的“现在重启”按钮。 </p>
+<p>开发工具会不断完善，在开发版可以体验。 <a href="https://www.google.com/intl/zh-CN/chrome/browser/canary.html" target="_blank">Chrome Canary</a> 是 Chrome 实验版，Canary 和 Chrome 可以同时安装。 你可以通过 <code>chrome://flags</code> 进一步加强你的 Chrome 开发工具 ，启用“Enable Developer Tools experiments （启用开发工具实验）”。不要忘了点击页面底部的“现在重启”按钮。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/c.png" alt=""></p>
-<a name="more"></a>
+<a id="more"></a>
 
-<p><a href="http://www.mozilla.org/en-US/firefox/aurora/">Firefox Aurora</a> 提供 Firefox 最新特性预览。不幸的是，Aurora 不能和 Firefox 同时打开。 </p>
+<p><a href="http://www.mozilla.org/en-US/firefox/aurora/" target="_blank">Firefox Aurora</a> 提供 Firefox 最新特性预览。不幸的是，Aurora 不能和 Firefox 同时打开。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/f.png" alt=""></p>
-<p><a href="http://nightly.webkit.org/">Webkit Nightly</a> 是 Safari 测试版，因此有些不稳定。Webkit Nightly 可以和 Safari 同时运行。 </p>
+<p><a href="http://nightly.webkit.org/" target="_blank">Webkit Nightly</a> 是 Safari 测试版，因此有些不稳定。Webkit Nightly 可以和 Safari 同时运行。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/s.png" alt=""></p>
-<p><a href="http://www.opera.com/zh-cn/computer/next">Opera Next</a> 是 Opera 最新改良版，会提供一些新的功能和特性。 </p>
+<p><a href="http://www.opera.com/zh-cn/computer/next" target="_blank">Opera Next</a> 是 Opera 最新改良版，会提供一些新的功能和特性。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/o.png" alt=""></p>
 <p>现在浏览器的发布周期为12周，浏览器自动更新，变化是增量的。 </p>
 <h3>移动开发工具位置</h3>
@@ -200,7 +170,7 @@
 <p>在 Chrome 开发工具右下角，点击并选择“General”标签，你可以改变工具的外观，停靠右侧时可以垂直显示面板。 </p>
 <h3>学习快捷键</h3>
 <p>Chrome 的快捷键列在设置菜单里，点击右下“齿轮”图标，可以看到“Shortcuts”标签。 </p>
-<p>IE 的快捷键是<a href="http://msdn.microsoft.com/en-us/library/dd565630(v=vs.85">在线的</a>.aspx) 。 </p>
+<p>IE 的快捷键是<a href="http://msdn.microsoft.com/en-us/library/dd565630(v=vs.85" target="_blank">在线的</a>.aspx) 。 </p>
 <p>Opera 的快捷键也在设置按钮里。 </p>
 <h2>Console 控制台</h2>
 <h3>Log, Info, Debug, Warn, Error</h3>
@@ -208,8 +178,7 @@
 <p>console.log() 是 printf 风格，因此你可以这么做：<code>console.log(&quot;%s is %d years old.&quot;, &quot;Bob&quot;, 42)</code>。 </p>
 <p>可以用 <code>console.info()</code> 输出提示信息；<code>console.debug()</code> 输出调试信息；<code>console.warn()</code> 输出警示信息；<code>console.error()</code> 输出错误信息。 </p>
 <p>你还可以用 %c 模式，把第二个变量作为样式格式参数。例如： </p>
-<pre><code><figure class="highlight"><pre><span class="tag">console</span><span class="class">.log</span>("%<span class="tag">cThis</span> <span class="tag">is</span> <span class="tag">green</span> <span class="tag">text</span> <span class="tag">on</span> <span class="tag">a</span> <span class="tag">yellow</span> <span class="tag">background</span>.", "<span class="tag">color</span><span class="pseudo">:green</span>; <span class="tag">background</span>-<span class="tag">color</span><span class="pseudo">:yellow")</span>;
-</pre></figure></code></pre>
+<pre><code><span class="tag">console</span><span class="class">.log</span>("%<span class="tag">cThis</span> <span class="tag">is</span> <span class="tag">green</span> <span class="tag">text</span> <span class="tag">on</span> <span class="tag">a</span> <span class="tag">yellow</span> <span class="tag">background</span>.", "<span class="tag">color</span><span class="pseudo">:green</span>; <span class="tag">background</span>-<span class="tag">color</span><span class="pseudo">:yellow")</span>;</code></pre>
 <p>Firebug 只不过显示的图标不同，消息的背景色是一致的。 </p>
 <p>根据 MDN 的消息，他们不赞成使用 console.debug() ，因此没有图标标识，赞成用 console.log() 代替。 </p>
 <p>Chrome 和 Safari（nightly）用 info 时不显示图标，用 debug 时显示蓝图标；用 warn 时显示黄图标；用 error 时显示红图标。 </p>
@@ -221,11 +190,10 @@
 <p>如果元素的数量不匹配，表格将显示 <code>undefined</code> 表示没有数据。 </p>
 <p>自定义列名，属性名必须在对象中指定元素。自定义（<code>index</code>）的值，可以给每个属性命名。 </p>
 <p>第二个可选的变量允许你明确指定哪一列要输出。 </p>
-<pre><code><figure class="highlight"><pre>console.table({
+<pre><code>console.table({
   <span class="comment">"London"</span>:{<span class="method">population:</span><span class="number">8173194</span>, <span class="method">country:</span><span class="comment">"UK"</span>, <span class="method">elevation:</span><span class="comment">"24m"</span>},
   <span class="comment">"New York"</span>:{<span class="method">population:</span><span class="number">8336697</span>, <span class="method">country:</span><span class="comment">"USA"</span>, <span class="method">elevation:</span><span class="comment">"10m"</span>}},
-  [<span class="comment">"population"</span>, <span class="comment">"country"</span>])
-</pre></figure></code></pre>
+  [<span class="comment">"population"</span>, <span class="comment">"country"</span>])</code></pre>
 <p>结果如下： </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/chrome-table-custom-headings.png" alt=""></p>
 <h3>Assert</h3>
@@ -284,7 +252,7 @@
 <p>你可以修改默认的“Abc”文字，在字体列表底部有个按钮，可以显示页面所有字体。 </p>
 <h3>浏览你的响应式网站</h3>
 <p>在响应式设计时代，最重要的是如何在任意尺寸的设备查看我们的网站。尽管我们可以调整浏览器大小，开发工具里还是有一些其它的工具可用。 </p>
-<p>在 Chrome 开发工具的“设置”面板（工具右下角点击齿轮），在“Overrides”标签，你会发现“Device Metrics 设备指标”选项，你可以指定宽度和高度，以及字体缩放尺寸。你可以把开发工具停靠在右侧，然后调整页面大小测试。 </p>
+<p>在 Chrome 开发工具的“设置”面板（工具右下���点击齿轮），在“Overrides”标签，你会发现“Device Metrics 设备指标”选项，你可以指定宽度和高度，以及字体缩放尺寸。你可以把开发工具停靠在右侧，然后调整页面大小测试。 </p>
 <p>Firefox 开发工具内置一个‘响应式设计模式’工具，此工具在开发工具的右上角。它包含一些预设的尺寸，你可以添加需要的尺寸。Firefox 也提供旋转的选项，你可以测试 landscape 和 portrait 模式。 </p>
 <h3>3D 视图</h3>
 <p>Firefox 开发工具可以 3D 视图查看你的网站，可以方便地查看元素嵌套关系，点击开发工具右上角立方体图标可以启动它。 </p>
@@ -311,11 +279,9 @@
 <h3>使用 SASS Source Maps</h3>
 <p>使用 CSS 预处理器有许多优势，但是在浏览器开发工具中修改比较困难。例如，当你再次运行 SASS 时， 在开发工具中保存的编译后CSS 可能被覆盖，不太理想。SASS 3.3 以上（可以安装使用‘sass gem install sass –pre’），为 SASS 文件创建映射很容易，你可以很容易的保存修改。 </p>
 <p>首先，为 SASS watch 命令增加 <code>--sourcemap</code> ，像这样： </p>
-<pre><code><figure class="highlight"><pre><span class="comment">sass</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span> <span class="comment">scss/devtoolsecrets</span>.<span class="comment">scss:css/devtoolsecrets</span>.<span class="comment">min</span>.<span class="comment">css</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">style</span> <span class="comment">compressed</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">sourcemap
-</pre></figure></code></pre>
+<pre><code><span class="comment">sass</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span> <span class="comment">scss/devtoolsecrets</span>.<span class="comment">scss:css/devtoolsecrets</span>.<span class="comment">min</span>.<span class="comment">css</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">style</span> <span class="comment">compressed</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">sourcemap</code></pre>
 <p>然后在 SASS 文件底部添加映射文件的名字（sourceMappingURL）： </p>
-<pre><code><figure class="highlight"><pre>/<span class="variable">*@</span> sourceMappingURL=devtoolsecrets.css.<span class="keyword">map</span> <span class="variable">*/</span>
-</pre></figure></code></pre>
+<pre><code>/<span class="variable">*@</span> sourceMappingURL=devtoolsecrets.css.<span class="keyword">map</span> <span class="variable">*/</span></code></pre>
 <p>然后，你需要启用“Experiments 实验”。地址栏输入 <strong>chrome://flags</strong> 启用“启用开发者工具实验”选项，点击页面底部“马上重启”按钮应用改变。在 Chrome 开发工具的右下角，点击齿轮按钮打开“设置”面板。 </p>
 <p>点击“General 常规”标签，激活“Enable Source Maps 启用 Source Maps”。点击“Experiments 实验”标签，检查“Support for SASS 支持 SASS ”选项。 </p>
 <p>重启浏览器，你可以直接查看 SASS 文件的行号了。 </p>
@@ -341,18 +307,16 @@
 <p>在 Chrome ，Javascript 在断点处暂停时，你可以查看当前作用域的所有变量和对象，既可以悬浮查看，也可以通过控制台查看。 </p>
 <p>Firebug 有同样的选项，但是需要在 DOM 菜单选择“show closures”。 如果断点设置恰当，这个强大的属性让你很容易查看闭包里的变量。 </p>
 <p>Firebug 有额外的功能，无需在断点停止，即可访问隐藏的闭包变量。看此例： </p>
-<pre><code><figure class="highlight"><pre><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name)</span> {</span>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name)</span> {</span>
   <span class="keyword">this</span>.introduce = <span class="keyword">function</span>() {
       console.log(<span class="string">"Hello, my name is %s"</span>, name);
   }
 }
 <span class="comment">// create an instance of Person: var someone = new Person("Arthur"); </span>
 <span class="comment">// we call a closure! someone.introduce(); </span>
-<span class="comment">// prints "Hello, my name is Arthur" </span>
-</pre></figure></code></pre>
-<p>代码访问以下闭包变量： <strong>closure.%variable</strong> 以上例子，你将用这个表达式访问 name： <strong>someone.introduce.%name // ==&gt; “Arthur”</strong> 注意你也可以改变值： </p>
-<pre><code><figure class="highlight"><pre>someone<span class="variable">.introduce</span>.%name = <span class="string">"Trillian"</span>; someone<span class="variable">.introduce</span>(); <span class="comment">// prints "Hello, my name is Trillian"</span>
-</pre></figure></code></pre>
+<span class="comment">// prints "Hello, my name is Arthur" </span></code></pre>
+<p>代码访问以下闭包变量： <strong>closure.%variable</strong> 以上例子���你将用这个表达式访问 name： <strong>someone.introduce.%name // ==&gt; “Arthur”</strong> 注意你也可以改变值： </p>
+<pre><code>someone<span class="variable">.introduce</span>.%name = <span class="string">"Trillian"</span>; someone<span class="variable">.introduce</span>(); <span class="comment">// prints "Hello, my name is Trillian"</span></code></pre>
 <p>Firebug 中，需要 JavaScript 的地方，同样的语法都会生效，例如监控面板和条件断点。 </p>
 <h3>监控值</h3>
 <p>在“脚本”标签的右上角，监控变量相当容易，只有输入变量名，“监控”将让它的值保持更新。 </p>
@@ -363,13 +327,11 @@
 <p>Opera 自动格式化压缩的 JavaScript 。 </p>
 <h3>使用 JavaScript Source Maps</h3>
 <p>当我们部署代码到生产环境时，比较明智的是压缩代码减少加载时间。压缩去除了无用的字符（比如注释），空行和空格。可是压缩后很难调试，无法单步调试，代码不易读。JavaScript source maps 调试压缩后 JavaScript 文件非常有用，它提供一个映射关联到未压缩文件。 </p>
-<p>创建 JavaScript source maps ，下载 <a href="https://code.google.com/p/closure-compiler/">Google Closure Compiler</a> ，它帮你生成 .map 文件。 </p>
+<p>创建 JavaScript source maps ，下载 <a href="https://code.google.com/p/closure-compiler/" target="_blank">Google Closure Compiler</a> ，它帮你生成 .map 文件。 </p>
 <p>运行带 Source Map 属性的 Closure Compiler ： </p>
-<pre><code><figure class="highlight"><pre><span class="comment">java</span> <span class="literal">-</span><span class="comment">jar</span> <span class="comment">compiler</span>.<span class="comment">jar</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">js</span> <span class="comment">common</span>.<span class="comment">js</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">create_source_map</span> <span class="string">.</span><span class="comment">/common</span>.<span class="comment">js</span>.<span class="comment">map</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">source_map_format=V3</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">js_output_file</span> <span class="comment">common</span>.<span class="comment">min</span>.<span class="comment">js
-</pre></figure></code></pre>
+<pre><code><span class="comment">java</span> <span class="literal">-</span><span class="comment">jar</span> <span class="comment">compiler</span>.<span class="comment">jar</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">js</span> <span class="comment">common</span>.<span class="comment">js</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">create_source_map</span> <span class="string">.</span><span class="comment">/common</span>.<span class="comment">js</span>.<span class="comment">map</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">source_map_format=V3</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">js_output_file</span> <span class="comment">common</span>.<span class="comment">min</span>.<span class="comment">js</code></pre>
 <p>在压缩后的 JS 文件底部加上映射文件的名字： sourceMappingURL </p>
-<pre><code><figure class="highlight"><pre>//@ sourceMappingURL=common<span class="preprocessor">.js</span><span class="preprocessor">.map</span>
-</pre></figure></code></pre>
+<pre><code>//@ sourceMappingURL=common<span class="preprocessor">.js</span><span class="preprocessor">.map</span></code></pre>
 <p>在 Chrome 开发工具，，“Settings 设置”菜单 -&gt; “General 常规”标签，激活“Enable Source Maps 启用 Source Maps ”。 </p>
 <p>现在，当你调试 JavaScript 时，可以用未压缩的版本查找问题所在。 </p>
 <h3>模拟User Agent</h3>
@@ -381,7 +343,7 @@
 <p>在 Chrome Canary ，用个圆形代替了光标，可以用于区分处于哪种模式。 </p>
 <h3>覆盖地理位置</h3>
 <p>如果你的应用用到了 Geolocation ，模拟不同的位置会非常有用。在 Chrome ，“设置”菜单，选择“Overrides”标签，这里可以模拟不同的经度纬度，也可以模拟不可用的位置。 </p>
-<p>在 <a href="https://maps.google.com/maps?showlabs=1">Google Maps Labs</a> 启用了坐标提示，你就可以从 Google Maps 获得位置的经纬度。 </p>
+<p>在 <a href="https://maps.google.com/maps?showlabs=1" target="_blank">Google Maps Labs</a> 启用了坐标提示，你就可以从 Google Maps 获得位置的经纬度。 </p>
 <h3>重写设备方向</h3>
 <p>设备方向改变可以在 Chrome 中模拟。“Settings ”-&gt; “Overrides”，选择“Override Device Orientation”，在输入框输入新值。 </p>
 <p>Alpha 代表沿 z 轴 0-360 度。 Beta 代表沿 x 轴 -180 到 180 度 - 前到后运动 Gamma 代表沿 y 轴 -90 到 90 度 - 左到右运动 </p>
@@ -419,7 +381,7 @@
 <p>HAR（HTTP 存档）文件可以用于各种性能分析技术和调试。测试提 bug 时可以附上 HAR 文件 - 开发人员可以在本地运行 HAR 数据查找问题原因。 </p>
 <p>我们可以用 Chrome 开发工具导出网络标签时间轴，右键点击网络输入，选择“Save as HAR with Content”。 </p>
 <p>Firebug 需要另安装插件 Net-export，此工具由 Firebug 开发主管和 HAR 格式创造者开发。 </p>
-<p><a href="http://ericduran.github.io/chromeHAR/">chromeHAR</a> 是个在线工具，提供跟 Chrome 一样的时间轴界面，功能类似。 </p>
+<p><a href="http://ericduran.github.io/chromeHAR/" target="_blank">chromeHAR</a> 是个在线工具，提供跟 Chrome 一样的时间轴界面，功能类似。 </p>
 <h3>检查 DOMContentLoad 和 Load 事件</h3>
 <p>Chrome 和 Safari （以及 Firebug 网络面板）的网络时间轴显示网页加载有多快，用一条线标记 DOMContentLoaded 和 load 事件触发的时机。 </p>
 <ul>
@@ -448,8 +410,8 @@
 <p>Safari 的开发工具将以弹出窗口的式出现，你可以调试移动设备的站点了。 </p>
 <h3>开发工具调试 Android</h3>
 <p>你可以用Mac 上的 Chrome Canary 开发工具调试安卓设备上的公共和本地网站，你可以在手机上访问 Chrome 开发工具的广泛的特性集。 </p>
-<p>首先，需要在安卓设备安装 <a href="https://play.google.com/store/apps/details?id=com.chrome.beta&amp;hl=en">Chrome BETA</a> 。 </p>
-<p>然后，需要下载 <a href="https://github.com/repenaxa/ADBPlugin/raw/master/out/npADBPlugin-crx.crx">ADB 插件扩展</a>，安装到 Chrome Canary 上。从未在 Google Play 商店下载过的话，需要拖拽文件到扩展页 （<a href="chrome://extensions/">chrome://extensions/</a>）。 </p>
+<p>首先，需要在安卓设备安装 <a href="https://play.google.com/store/apps/details?id=com.chrome.beta&amp;hl=en" target="_blank">Chrome BETA</a> 。 </p>
+<p>然后，需要下载 <a href="https://github.com/repenaxa/ADBPlugin/raw/master/out/npADBPlugin-crx.crx" target="_blank">ADB 插件扩展</a>，安装到 Chrome Canary 上。从未在 Google Play 商店下载过的话，需要拖拽文件到扩展页 （<a href="chrome://extensions/">chrome://extensions/</a>）。 </p>
 <p>确保已经在 <a href="chrome://flags">chrome://flags</a> 里面打开“Enable Developer Tools experiments 启用开发工具实验”。 </p>
 <p>手机用 USB 线插到电脑上，在手机找到“设置”，选择“开发人员选项”，确保“USB 调试”选上。如果它已经选上，而你以前从未用过 USB 调试，取消选择，重选一次，确保它有此计算机的 MAC 地址。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/adroid.png" alt=""></p>
@@ -465,112 +427,92 @@
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/4.png" alt=""></p>
 <h2>扩展</h2>
 <h3>覆盖地理位置</h3>
-<p>在 Firefox ，位置 API 可以像 Chrome 一样覆盖，需要 <a href="https://addons.mozilla.org/fr/firefox/addon/geolocater/">Geolocater 扩展</a> 。 </p>
-<p>安装后到“Tools”工具菜单，“Geolocater”，“Manage 管理”，在这你可以通过浏览地图或搜索位置，直接添加“伪造的”地理位置。你可以覆盖先前预设的地理位置。可以到 <a href="http://html5demos.com/geo">html5demos for Geolocation</a> 页试试。 </p>
+<p>在 Firefox ，位置 API 可以像 Chrome 一样覆盖，需要 <a href="https://addons.mozilla.org/fr/firefox/addon/geolocater/" target="_blank">Geolocater 扩展</a> 。 </p>
+<p>安装后到“Tools”工具菜单，“Geolocater”，“Manage 管理”，在这你可以通过浏览地图或搜索位置，直接添加“伪造的”地理位置。你可以覆盖先前预设的地理位置。可以到 <a href="http://html5demos.com/geo" target="_blank">html5demos for Geolocation</a> 页试试。 </p>
 
+      
     </div>
-    
-    <footer >
+    <footer>
+      
         
-            
-            
-    
-    <div class="tags-row">
-        标签：<a class="btn btn-info" href="/tags/debug/">debug</a>
-    </div>
+        
+  
+  <div class="tags">
+    <a href="/tags/debug/">debug</a>
+  </div>
 
         
-        <div class="clearfix"></div>
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
-
-
-<section id="comment">
-    <h1 class="page-sub-title">留言</h1>
-    <!-- Duoshuo Comment BEGIN -->
-    <div class="ds-thread" data-title="Secrets of the Browser Developer Tools">
-
-    <script type="text/javascript">
-        var duoshuoQuery = {short_name:"nirgone"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';
-            ds.async = true;
-            ds.src = 'http://static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-    </script>
-    <!-- Duoshuo Comment END -->
-    </div>
-</section>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer id="page-footer"><div class="footer-content">
-    <div class="container-center">
-        <div class="footer-text pull-left">
-        
-            <div class="theme-copyright">
-              <strong>    
-                      Stay hungry. Stay foolish.
-              </strong>
-            </div>
-            
-            <div class="copyright">
-                
-                Copyright &copy; 2013 <a href="/">Rong Nie</a>
-                
-            </div>
-
-           
-        </div>
-        <div class="social-group pull-right">
-            
-            <a href="https://github.com/nirgone" target="_blank" title="github"><i class="icon-github"></i></a>
-            
-            
-            <a href="http://weibo.com/nierg" target="_blank" title="新浪微博"><i class="icon-weibo"></i></a>
-            
-            
-        </div>
-        <div class="clearfix"></div>
-    </div>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:niefy.com">
+  </form>
 </div>
-</footer>
-    
 
-<script src="/js/prettify.js"></script>
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/css/">css</a><small>1</small></li>
+  
+    <li><a href="/tags/debug/">debug</a><small>1</small></li>
+  
+    <li><a href="/tags/design/">design</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 Rong Nie
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $("pre").addClass("prettyprint");
-        prettyPrint();
-    });
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
-
-
-<script>
-    (function($) {
-        //当内容区内容不够长时，设置内容区域的高度使footer沉底
-        var resizeContentWrapper = function() {
-            var contentHeight = Math.floor($('#content-wrapper .container-center').height()),
-                headerHeight = Math.floor($('#page-header').height()),
-                footerHeight = Math.floor($('#page-footer').height()),
-                minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
-            if(contentHeight < minHeight) {
-                $('#content-wrapper').height(minHeight);
-            }
-         };
-         $(document).ready(resizeContentWrapper);
-         $(window).resize(resizeContentWrapper);
-    })(jQuery);
-</script>
-
 
 </body>
 </html>
