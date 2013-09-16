@@ -22,31 +22,31 @@
     <link rel="stylesheet" href="/css/lib/furatto.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 
+
     
         <link rel="stylesheet" href="/css/lib/prettify_raytaylorism.css" type="text/css">
         
     
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="/js/jquery-1.10.2.min.js"></script>
-    <script src="/js/jquery.jpanelmenu.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    
 </head>
 
 
-<body class="container-fluid">
-    <header id="page-header">
+<body>
+    <header id="page-header"> 
         <div class="navbar inverse-navbar">
     <div class="navbar-inner">
         <div class="container-center">
-            <a href="#menu" class="menu-trigger" data-meteocon="M">
-                <i class="icon-reorder"></i>
+            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M">
             </a>
             <div class="nav-collapse navbar-responsive-collapse collapse">
                 <nav id="menu">
                     <ul class="nav">
-                        <li><a class="brand" href="index.html">All Is Well</a></li>
+                        <li><a class="brand" href="javascript:void(0)">All Is Well</a></li>
                     </ul>
-                    <div class="pull-right nav">
+                    <div class="pull-right">
                         
                             <a href="/" class="btn btn-primary btn-large">
                                 <i class="icon-home icon-white"></i>
@@ -58,40 +58,13 @@
                                 存档
                             </a>
                         
-                            <a href="/about" class="btn btn-primary btn-large">
+                            <a href="/aboutme" class="btn btn-primary btn-large">
                                 <i class="icon-user icon-white"></i>
                                 关于
                             </a>
                         
                     </div>
                 </nav>
-                <nav id="jPanelMenu-menu-side">
-    <ul class="nav">
-        <li><a class="brand" href="index.html">All Is Well</a></li>
-        
-            <li>
-                <a href="/">
-                    <i class="icon-home icon-white"></i>
-                    首页
-                </a>
-            </li>
-        
-            <li>
-                <a href="/archives">
-                    <i class="icon-archive icon-white"></i>
-                    存档
-                </a>
-            </li>
-        
-            <li>
-                <a href="/about">
-                    <i class="icon-user icon-white"></i>
-                    关于
-                </a>
-            </li>
-        
-    </ul>
-</nav>
             </div>
         </div>
     </div>
@@ -99,8 +72,10 @@
 
     </header>
     <div id="content-wrapper">
-        <div class="container-center">
-        <article class="post">
+        <div class="container-center main-content">
+            <div class="row-fluid">
+                <div class="span12">
+                    <article class="post">
     <div class="article-title article-title-big">
         
     
@@ -217,7 +192,7 @@
 <p>有时候不想让我们的工具在屏幕底部，大部分的开发工具提供了配置选项。 </p>
 <p>Chrome 开发工具，左下角图标允许改变停靠设置。快速点击它，会在底部和右侧切换。长按可以选择停靠选项（独立窗口打开），你也可以点击并拖拽移动开发工具。 </p>
 <p>Firefox 和 Safari 开发工具，停靠选项在右上角临近关闭按钮的位置，可以新窗口打开。 </p>
-<p>要改变停靠位置，可点击左上角小虫子，选择 Firebug 界面位置（上/下/左/右）。Firebug 右上角可以快速选择：最小化，新窗口，关闭。 </p>
+<p>要改变停靠位置，可点击左上角小虫子，选择 Firebug 界面位置（上/下/���/右）。Firebug 右上角可以快速选择：最小化，新窗口，关闭。 </p>
 <h3>开发工具调试响应式设计</h3>
 <p>当调试移动站点的时候，停靠在右侧可充分利用空间，并且可以快速调整浏览器视口和开发工具的宽度，调试不同网页宽度。 </p>
 <p>在 Chrome 开发工具左下角，点击按钮可切换下侧或右侧停靠位置。 </p>
@@ -290,7 +265,7 @@
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/chrome-breadcrumbs.png" alt=""></p>
 <p>Firebug，Firefox 和 Safari，显示在 DOM 检查器的顶部。 </p>
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/firefox-breadcrumbs.png" alt=""></p>
-<p>你可以直接点击节点，或者按箭头键导航面包屑。按左箭头是父节点，按右箭头是第一个子项。上下箭头导航到下一个或前一个子节点。没有更多子节点，上下箭头导航回到 DOM 树。 </p>
+<p>你可以直接点击节点，或者按箭头键导航面包屑。按左箭头是父节点���按右箭头是第一个子项。上下箭头导航到下一个或前一个子节点。没有更多子节点，上下箭头导航回到 DOM 树。 </p>
 <p>在 Firefox ，你可以右击面包屑看兄弟节点列表，可以快速导航到兄弟节点。 </p>
 <p>在 Safari，你可以左击面包屑看兄弟节点。 </p>
 <h3>搜索 DOM 节点</h3>
@@ -349,7 +324,7 @@
 <p>在 Chrome 中创建条件断点，先创建个正常的断点，然后右击断点选择“编辑断点”添加条件。 </p>
 <p>在 Firebug ，先创建常规断点，然后右击出现输入框，可以添加条件。 </p>
 <p>在 Firefox ，右击想创建断点的行，选择“增加条件断点”。 </p>
-<p>在 IE，先创建常规断点，然后右击断点，选择“条件…���。 </p>
+<p>在 IE，先创建常规断点，然后右击断点，选择“条件…”。 </p>
 <p>在 Opera，先创建常规断点，然后右击断点，选择“添加条件”。 </p>
 <p>在 Safari，确保脚本和“调试器”面板都打开，创建一个断点，然后在“调试器”面板右击同样的断点，选择“编辑断点”。 </p>
 <h3>DOM 断点</h3>
@@ -410,7 +385,7 @@
 <p>每次访问 canvas Chrome 会创建日志，提供每次访问上下文的列表以及快照。你可以点击一个日志项重播那帧，看看哪些命令被调用，及它们在哪一行。 </p>
 <h3>运行代码片段</h3>
 <p>如果你发现同样的代码需要重复的运行，Chrome Canary（Chrome 29 已有此功能） 提供了便捷的“Snippets 片段”区域，你可以保存代码。 </p>
-<p>在“Source”标签，“Sources”和“Content scripts”后面有个“Snippets ”标签，右键点击空区域，点“New”创建新的片段，写入一些代码，无论何时再想运行它时，右键点击选择“Run 运行”即可。 </p>
+<p>在“Source”标签，“Sources”和“Content scripts”后面有个“Snippets ”标签，���键点击空区域，点“New”创建新的片段，写入一些代码，无论何时再想运行它时，右键点击选择“Run 运行”即可。 </p>
 <p>Firefox 6 + 的代码片段速记器（开发工具右上角小本子图标）跟这很类似。 </p>
 <h2>性能</h2>
 <h3>禁用浏览器缓存</h3>
@@ -482,7 +457,7 @@
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/4.png" alt=""></p>
 <h2>扩展</h2>
 <h3>覆盖地理位置</h3>
-<p>在 Firefox ，位置 API 可以像 Chrome 一样覆盖，需要 <a href="https://addons.mozilla.org/fr/firefox/addon/geolocater/" target="_blank">Geolocater 扩展</a> 。 </p>
+<p>在 Firefox ，位��� API 可以像 Chrome 一样覆盖，需要 <a href="https://addons.mozilla.org/fr/firefox/addon/geolocater/" target="_blank">Geolocater 扩展</a> 。 </p>
 <p>安装后到“Tools”工具菜单，“Geolocater”，“Manage 管理”，在这你可以通过浏览地图或搜索位置，直接添加“伪造的”地理位置。你可以覆盖先前预设的地理位置。可以到 <a href="http://html5demos.com/geo" target="_blank">html5demos for Geolocation</a> 页试试。 </p>
 
     </div>
@@ -525,6 +500,8 @@
 </section>
 
 
+                </div>
+            </div>
         </div>
     </div>
     <footer id="page-footer"><div class="footer-content">
@@ -543,6 +520,7 @@
                 
             </div>
 
+           
         </div>
         <div class="social-group pull-right">
             
@@ -550,6 +528,7 @@
             
             
             <a href="http://weibo.com/nierg" target="_blank" title="新浪微博"><i class="icon-weibo"></i></a>
+            
             
         </div>
         <div class="clearfix"></div>
@@ -566,6 +545,7 @@
     });
 </script>
 
+
 <script>
     (function($) {
         //当内容区内容不够长时，设置内容区域的高度使footer沉底
@@ -576,70 +556,13 @@
                 minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
             if(contentHeight < minHeight) {
                 $('#content-wrapper').height(minHeight);
-            } else {
-                $('#content-wrapper').css({height: 'auto'});
             }
-        };
-
-        //响应式侧边栏
-        var initJPanelMenu = function() {
-            var jPM = $.jPanelMenu({
-                menu: '#jPanelMenu-menu-side',
-                duration: 500
-            });
-            jPM.on();
-        };
-
-        var pagination = function() {
-            var PER_PAGE_NUM = showNum = 5,
-                i,
-                initHeight = 0,
-                outerHeightList = [],
-                articleList = $('#content-wrapper article'),
-                articleNum = articleList.length;
-
-            for(i = 0; i < articleList.length; i++) {
-                outerHeightList.push($(articleList[i]).outerHeight());
-                if(i >= PER_PAGE_NUM) {
-                    $(articleList[i]).hide();
-                }
-            }
-
-            $('.btn-loadmore').click(function() {
-                var deltaH = 0,
-                    toShowList = [];
-                for(i = showNum, showNum += PER_PAGE_NUM; i < showNum; i++) {
-                    if(i >= articleList.length) {
-                        $('.btn-loadmore').html("已经到底啦");
-                        break;
-                    }
-                    toShowList.push($(articleList[i]));
-                    deltaH += outerHeightList[i];
-                }
-                $('body').animate({
-                    scrollTop: $('#article-list').height()
-                });
-                $('#article-list').animate({
-                    height: "+=" + deltaH
-                }, 1000, function() {
-                    for(i = 0; i < toShowList.length; i++) {
-                        toShowList[i].css({opacity: 0});
-                        toShowList[i].show();
-                        toShowList[i].animate({
-                            opacity: 1
-                        }, 1000);
-                    }
-                });
-            });
-            resizeContentWrapper();
-        };
-
-        $(document).ready(pagination);
-        $(document).ready(resizeContentWrapper);
-        $(document).ready(initJPanelMenu);
-        
-        $(window).resize(resizeContentWrapper);
+         };
+         $(document).ready(resizeContentWrapper);
+         $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>
+
+
 </body>
 </html>
