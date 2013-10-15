@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Secrets of the Browser Developer Tools | All Is Well</title>
+  <title>Secrets of the Browser Developer Tools | Ron Nie`s Blog</title>
   <meta name="author" content="Rong Nie">
   
-  <meta name="description" content="javascript, css, and design">
+  <meta name="description" content="前端其实没有那么难！">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Secrets of the Browser Developer Tools"/>
-  <meta property="og:site_name" content="All Is Well"/>
+  <meta property="og:site_name" content="Ron Nie`s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
@@ -20,7 +20,7 @@
 
   <link href="/favicon.png" rel="icon">
   <link rel="stylesheet" href="/css/lib/duoshuo_style.css" type="text/css">
-  <link rel="alternate" href="/atom.xml" title="All Is Well" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Ron Nie`s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -29,8 +29,8 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">All Is Well</a></h1>
-  <h2><a href="/">javascript, css, and design</a></h2>
+  <h1><a href="/">Ron Nie`s Blog</a></h1>
+  <h2><a href="/">前端其实没有那么难！</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
@@ -178,7 +178,7 @@
 <p>不必用 alert 时，console.log() 是个极其有用的输出调试工具； </p>
 <p>console.log() 是 printf 风格，因此你可以这么做：<code>console.log(&quot;%s is %d years old.&quot;, &quot;Bob&quot;, 42)</code>。 </p>
 <p>可以用 <code>console.info()</code> 输出提示信息；<code>console.debug()</code> 输出调试信息；<code>console.warn()</code> 输出警示信息；<code>console.error()</code> 输出错误信息。 </p>
-<p>你还可以用 %c 模式，把第二个变量作为样式格式参数。例如： </p>
+<p>你还可以用 %c 模式，把第二个变量作为样式格式���数。例如： </p>
 <pre><code><span class="tag">console</span><span class="class">.log</span>("%<span class="tag">cThis</span> <span class="tag">is</span> <span class="tag">green</span> <span class="tag">text</span> <span class="tag">on</span> <span class="tag">a</span> <span class="tag">yellow</span> <span class="tag">background</span>.", "<span class="tag">color</span><span class="pseudo">:green</span>; <span class="tag">background</span>-<span class="tag">color</span><span class="pseudo">:yellow")</span>;</code></pre>
 <p>Firebug 只不过显示的图标不同，消息的背景色是一致的。 </p>
 <p>根据 MDN 的消息，他们不赞成使用 console.debug() ，因此没有图标标识，赞成用 console.log() 代替。 </p>
@@ -252,7 +252,7 @@
 <p><img src="http://jinlong.github.io/images/post/devtoolsecrets/firefox-inspect-fonts.png" alt=""></p>
 <p>你可以修改默认的“Abc”文字，在字体列表底部有个按钮，可以显示页面所有字体。 </p>
 <h3>浏览你的响应式网站</h3>
-<p>在响应式设计时代，最重要的是如何在任意尺寸的设备查看我们的网站。尽管我们可以调整浏览器大小，开发工具里还是有一些其它的工���可用。 </p>
+<p>在响应式设计时代，最重要的是如何在任意尺寸的设备查看我们的网站。尽管我们可以调整浏览器大小，开发工具里还是有���些其它的工具可用。 </p>
 <p>在 Chrome 开发工具的“设置”面板（工具右下角点击齿轮），在“Overrides”标签，你会发现“Device Metrics 设备指标”选项，你可以指定宽度和高度，以及字体缩放尺寸。你可以把开发工具停靠在右侧，然后调整页面大小测试。 </p>
 <p>Firefox 开发工具内置一个‘响应式设计模式’工具，此工具在开发工具的右上角。它包含一些预设的尺寸，你可以添加需要的尺寸。Firefox 也提供旋转的选项，你可以测试 landscape 和 portrait 模式。 </p>
 <h3>3D 视图</h3>
@@ -376,7 +376,7 @@
 <li>Response Time 按网络请求获得响应的时间排序</li>
 <li>End Time 按请求完成时间排序</li>
 <li>Duration 按请求完成花费时间排序</li>
-<li>Latency 浏览器初始���求到接收响应的时间总和。以等待时间排序，可以看看哪个资源占用了大量时间等待响应。等待时间依赖于用户距服务器的距离，设置 Content Delivery Networks （CDN）可以改善此时间。合并 CSS 和 JavaScript 文件，图像拼接可以减少资源请求数，因此减少总延迟。</li>
+<li>Latency 浏览器初始请求到接收响应的时间总和。以等待时间排序，可以看看哪个资源占用了大量时间等待响应。等待时间依赖于用户距服务器的距离，设置 Content Delivery Networks （CDN）可以改善此时间。合并 CSS 和 JavaScript 文件，图像拼接可以减少资源请求数，因此减少总延迟。</li>
 </ul>
 <h3>网络时间轴导出为 HAR 文件</h3>
 <p>HAR（HTTP 存档）文件可以用于各种性能分析技术和调试。测试提 bug 时可以附上 HAR 文件 - 开发人员可以在本地运行 HAR 数据查找问题原因。 </p>
@@ -524,8 +524,36 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
+<script src="/js/prettify.js"></script>
 
 
+
+<script type="text/javascript">
+	$(document).ready(function()         
+	{	
+     $("pre").addClass("prettyprint linenums");
+     prettyPrint();
+     $('.closeaside').click(function(){
+            $('#asidepart').fadeOut();
+            $('#main').animate({
+                marginLeft: ['10%','swing'],
+                marginRight: ['10%','swing']
+            });
+            $('.openaside').fadeIn();  
+        });
+        $('.openaside').click(function(){
+            $('#asidepart').fadeIn();
+            $('#main').animate({
+                marginLeft: ['0%','swing'],
+                marginRight: ['0%','swing']
+            });
+            $('.openaside').fadeOut();  
+        });
+        $(window).scroll(function(){
+            $('.openaside').css("top",Math.max(50,260-$(this).scrollTop()));
+        });
+	});
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
